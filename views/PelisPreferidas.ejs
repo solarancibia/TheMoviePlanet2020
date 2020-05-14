@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/Peliculas fav.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <meta charset="utf-8">
+    <title>The Movie Planet</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="/movies/Home"> <img src="/images/logo.png" class="loguito" alt=""> </a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/movies/ListadoDeGeneros">Genres<span class="sr-only">(current)</span></a>
+        </li>
+        <li id="pelispref"class="nav-item">
+          <a class="nav-link" href="/movies/PelisPreferidas">Favorite movies</a>
+        </li>
+      </ul>
+      <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
+          <span class="uk-search-icon-flip" uk-search-icon></span>
+          <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search" >
+      </form>
+    </div>
+  </nav>
+    </header>
+    <p class="saludo">Welcome</p>
+    <div class="uk-position-relative uk-visible-toggle uk-light"  tabindex="-1" uk-slider>
+
+    <h1 class="headers">Your favorite movies</h1>
+<section>
+  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+  <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m paQueAnde">
+
+  </ul>
+  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+  </div>
+</section>
+<br>
+
+<footer>
+  <img src="/images/tmdblogo.png" class="tmdblogo">
+
+  <div class="nombres">
+  <ul>
+    <li>MATIAS GALLARDO</li>
+    <li>JUAN IGNACIO BEDOIAN</li>
+    <li>SOL RODRIGUEZ ARANCIBIA</li>
+  </ul>
+</div>
+     </div>
+
+</footer>
+
+
+  </body>
+  <!-- <script type="text/javascript" src="../Login/LoginCompleto.js"></script> -->
+
+<script type="text/javascript" src="/javascripts/PelisPreferidas.js"></script>
+</html>

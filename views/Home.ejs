@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="/stylesheets/pagina.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <meta charset="utf-8">
+    <title>The Movie Planet</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+
+      <a class="navbar-brand" href="/movies/Home"> <img src="/images/logo.png" class="loguito" alt=""> </a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/movies/ListadoDeGeneros">Genres<span class="sr-only">(current)</span></a>
+        </li>
+        <li id="pelispref"class="nav-item">
+          <a class="nav-link" href="/movies/PelisPreferidas">Favorite movies</a>
+        </li>
+      </ul>
+      <!-- <form method="get"class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+
+      <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
+                      <span class="uk-search-icon-flip" uk-search-icon></span>
+                      <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search" >
+                  </form>
+      <a  id="login" style="color:gold"; class="uk-button uk-button-default btn btn-outline-warning" href="#modal-sections" uk-toggle>Login</a>
+
+<div id="modal-sections" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Login</h2>
+        </div>
+        <div class="uk-modal-body">
+          <form class="logincompleto" action="Home.html" method="post">
+          <label for="nombre">Name</label>
+          <input class="name" type="text" name="name" value="" required>
+          <br>
+          <label for="genero">Gender</label>
+          <select class="" name="genero">
+            <option value="fem">
+              Female
+            </option>
+            <option value="mal">
+              Male
+            </option>
+            <option value="other">
+              Other
+            </option>
+          </select>
+          <br>
+          <label for="email">Email</label>
+          <input type="email" name="email" value="" required>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="submit">Send</button>
+        </div>
+            </form>
+    </div>
+  </div>
+    </div>
+  </nav>
+    </header>
+            <p class="saludo">Welcome</p>
+            <div class="uk-position-relative uk-visible-toggle uk-light"  tabindex="-1" uk-slider>
+
+            <h1 class="headers">Popular movies</h1>
+
+      <ul class="uk-slider-items uk-child-width-1-10" id="listaPopulares">
+
+      </ul>
+
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+  </div>
+
+  <h1 class="headers">High-rated movies</h1>
+  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+    <ul class="uk-slider-items uk-child-width-1-10" id="topRated">
+
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+  <h1 class="headers">Coming soon...</h1>
+  <div class="uk-position-relative uk-visible-toggle uk-light divPagina" tabindex="-1" uk-slider>
+
+    <ul class="uk-slider-items uk-child-width-1-10" id="comingSoon">
+
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+          <footer>
+            <img src="/images/tmdblogo.png" class="tmdblogo">
+
+            <div class="nombres">
+            <ul>
+              <li>MATIAS GALLARDO</li>
+              <li>JUAN IGNACIO BEDOIAN</li>
+              <li>SOL RODRIGUEZ ARANCIBIA</li>
+            </ul>
+          </div>
+               </div>
+
+         </footer>
+
+
+
+
+  </body>
+  <!-- <script type="text/javascript" src="../Login/LoginCompleto.js"></script> -->
+
+<script type="text/javascript" src="/javascripts//PelisPreferidas.js"></script>
+<script type="text/javascript" src="/javascripts/Home.js"></script>
+<script type="text/javascript" src="/javascripts//ResultadoDelBuscador.js">
+
+</script>
+</html>

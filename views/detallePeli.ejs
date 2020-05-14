@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <link rel="stylesheet" href="/stylesheets/detallePeli.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <meta charset="utf-8">
+    <title>The Movie Planet</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light idea" id="navbar">
+
+      <a class="navbar-brand" href="/movies/Home"> <img src="/images/logo.png" class="loguito" alt=""> </a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/movies/ListadoDeGeneros">Genres<span class="sr-only">(current)</span></a>
+        </li>
+        <li id="pelispref"class="nav-item">
+          <a class="nav-link" href="/movies/PelisPreferidas">Favorite movies</a>
+        </li>
+      </ul>
+      <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
+          <span class="uk-search-icon-flip" uk-search-icon></span>
+          <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search" >
+      </form>
+    </div>
+  </nav>
+    </header>
+
+    <section>
+      <aside class="posterPelicula">
+        </aside>
+      <h2 class="titulos"></h2>
+      <div class="genero">
+        <p>This movie belongs to the following genres:</p>
+      </div>
+
+        <div class= detalles>
+
+        </div>
+      <div class="lenguajes">
+        <h2>Available languages</h2>
+        <ul>
+
+        </ul>
+
+      </div>
+      <div class="sinopsis">
+        <h2>Overview</h2>
+        <p>
+        </p>
+      </div>
+
+      <div class="fechaEstreno">
+        <h2>Release date: <span></span></h2>
+
+      </div>
+
+
+      </div>
+
+      <div class="trailer">
+        <button class="uk-button uk-button-default uk-margin uk-button-secondary" type="button" uk-toggle="target: +">Watch trailer</button>
+        <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls playsinline hidden uk-video></iframe>
+
+      </div>
+
+      <div class="BotonVerRecomendaciones">
+      <!-- boton sacado de uikit -->
+        <button id="VerRecomendaciones" class="uk-button uk-button-default uk-button-secondary" style="margin-top:35px"> Recommended for you</button>
+        <br>
+        <br>
+        <div class="Recomendadas">
+          <!--   UIKIT para que slider -->
+          <div class="uk-position-relative uk-visible-toggle uk-light slider VerRecomendaciones" tabindex="-1" uk-slider>
+           <ul id="peliculasRecomendadas" class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m peliculasRecomendadas">
+           </ul>
+           <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+            uk-slidenav-previous uk-slider-item="previous"></a>
+           <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+            uk-slidenav-next uk-slider-item="next"></a>
+       </div>
+</div>
+</div>
+      <br>
+
+    </section>
+<br>
+<br>
+    <footer>
+      <img src="/images/tmdblogo.png" class="tmdblogo">
+
+      <div class="nombres">
+      <ul>
+        <li>MATIAS GALLARDO</li>
+        <li>JUAN IGNACIO BEDOIAN</li>
+        <li>SOL RODRIGUEZ ARANCIBIA</li>
+      </ul>
+    </div>
+         </div>
+
+   </footer>
+
+
+  </body>
+<script type="text/javascript" src="/javascripts/detallePeli.js"></script>
+<script type="text/javascript" src="/javascripts/PelisPreferidas.js"></script>
+</html>

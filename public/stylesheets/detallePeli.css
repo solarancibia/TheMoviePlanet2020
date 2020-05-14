@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+html{
+  cursor: url(/images/giphy.gif),default;
+}
+body{
+  cursor: url(/images/giphy.gif),default;
+  background-image: url("/images/Fondo.png");
+  background-size: cover;
+
+}
+footer{
+    background-color: rgba(112, 148, 181, 0.65);
+    height: 12vh;
+    overflow: hidden;
+}
+
+.nombres {
+  font-family: Rubik;
+  font-size: small;
+  color: white;
+  text-align: right;
+  float: right;
+  padding-top: 1%;
+
+}
+
+.nombres ul {
+  border-right: 5px solid #ffffff;
+    list-style-type: none;
+    padding-right: 17px;
+}
+.tmdblogo{
+  width: 7%;
+    float: right;
+    padding: 1%;
+    padding-left: 1%;
+    padding-top: 0.7%;
+}
+
+#pelispref{
+  display: none;
+}
+
+.nav-brand{
+  width: 200px;
+margin-right: 0px;
+height: 90px;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+.loguito{
+  width: 100%;
+}
+#navbar{
+padding-bottom: 0px;
+padding-top: 0px;
+}
+
+.navbar-brand{
+  width: 111px;
+margin-right: 17px;
+}
+video{
+  width: 45%;
+}
+
+.titulos{
+  font-family: Poppins;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-weight: bold;
+  padding-top: 22px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.genero{
+  font-family: Roboto Slab;
+  color: #faac18;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #030226;
+  width: 43%;
+  border-radius: 15px;
+
+}
+
+.lenguajes h2{
+  font-family: Poppins;
+  font-weight: normal;
+  color: white;
+  font-size: 25px;
+  padding-top: 20px;
+  background-color: #030226;
+  width: 28%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 15px;
+  margin-top: 2%;
+}
+
+section{
+  padding-left: 10px;
+}
+
+.sinopsis h2{
+  font-family: Poppins;
+  font-weight: normal;
+  color: white;
+  font-size: 25px;
+  background-color: #030226;
+  margin-top: 3%;
+  width: 8%;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  border-radius: 15px;
+}
+
+.posterPelicula {
+  position: relative;
+}
+
+.posterPelicula img {
+  float: right;
+  width: 22%;
+  position: absolute;
+  top: 5%;
+  left: 72%;
+  margin-top: 2%;
+}
+
+.lenguajes ul {
+  border-left: 7px solid #cf181f;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 10px 20px;
+  width: 13%;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+
+}
+.sinopsis p{
+  text-align: justify;
+}
+
+.detalles ul {
+  border-left: 7px solid #cf181f;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 10px 20px;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  width: 200px;
+}
+.sinopsis p{
+  border-left: 7px solid #cf181f;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 10px 20px;
+  width: 60%;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+
+}
+.sinopsis {
+    position: relative;
+}
+
+.fechaEstreno h2{
+  font-family: Poppins;
+  font-weight: normal;
+  color: white;
+  font-size: 25px;
+  background-color: #030226;
+  margin-top: 3%;
+  width: 36%;
+  padding-top: 2px;
+  border-radius: 15px;
+
+}
+.fechaEstreno{
+  position: relative;
+}
+.boton{
+  margin-bottom: 0%;
+}
+
+.boton div{
+  width: 2%;
+}
+.trailer{
+  position: relative;
+}
+.boton{
+  position: relative;
+}
+
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 992px) and (orientation : portrait){
+.posterPelicula img{
+    width: 300px;
+left: 298px;
+top: 45px;
+}
+.sinopsis{
+  top: 58px;
+
+}
+.fechaEstreno{
+top: 50px;
+width: 500px;
+}
+.trailer{
+  left: 0px;
+top: 39px;
+}
+.boton{
+  left: 0px;
+  top: 48px;
+  }
+
+.genero{
+    width: 300px;
+}
+.lenguajes ul{
+  width: 200px;
+}
+section{
+  height: 130vh;
+}
+}
+
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) and (orientation : portrait){
+.posterPelicula img{
+  width: 270px;
+
+position: absolute;
+
+left: -1vh;
+
+top: 16vh;
+}
+.genero{
+position: relative;
+}
+.genero p{
+position: absolute;
+
+top: 76vh;
+
+width: 100vw;
+}
+.titulos{
+  position: absolute;
+
+  top: 0vh;
+
+}
+.detalles{
+position: relative;
+}
+.detalles ul{
+  position: absolute;
+
+bottom: -111vh;
+}
+.lenguajes{
+position: relative;
+}
+.lenguajes h2{
+  position: absolute;
+
+bottom: -122vh;
+
+width: 50vw;
+
+text-align: center;
+}
+.lenguajes ul{
+  position: absolute;
+
+  bottom: -131vh;
+
+  width: 45vw;
+}
+.sinopsis{
+position: relative;
+}
+.sinopsis h2{
+  position: absolute;
+  bottom: -140vh;
+width: 50vw;
+}
+.sinopsis p{
+  position: absolute;
+  bottom: -185vh;
+}
+.BotonVerRecomendaciones{
+  position: relative;
+}
+.BotonVerRecomendaciones button{
+  position: absolute;
+  bottom: -211vh;
+
+}
+.fechaEstreno h2{
+  position: absolute;
+  bottom: -198vh;
+width: 50vw;
+}
+section{
+  position: relative;
+height: 220vh;
+}
+.trailer button{
+  bottom: -205vh;
+
+  position: absolute;
+}
+}
