@@ -74,7 +74,7 @@ var recomendaciones = datos.results
 var r= ""
 console.log(recomendaciones);
 for (var i = 0; i < recomendaciones.length; i++) {
-document.querySelector(".peliculasRecomendadas").innerHTML+= '<li><a href="/movies/detallePeli?idDePelicula='+recomendaciones[i].id +
+document.querySelector(".peliculasRecomendadas").innerHTML+= '<li><a href="/movies/detallePeli?idDePeli='+recomendaciones[i].id +
 '"><img src="https://image.tmdb.org/t/p/original/' + recomendaciones[i].poster_path + '" alt=""></a></li>'
 }})
 .catch(function(){
