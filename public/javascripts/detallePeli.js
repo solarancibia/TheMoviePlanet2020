@@ -24,7 +24,7 @@ var article = ""
     var i;
     for (i = 0; i < arrayDeGeneros.length; i++) {
       arrayDeGeneros[i]
-      article += "<li> <a href= '/movies/peliculasPorGenero?id=" + arrayDeGeneros[i].id + "'>" + arrayDeGeneros[i].name + "</a> </li>"
+      article += "<li> <a href= '/movies/peliculasPorGenero?idGenero=" + arrayDeGeneros[i].id + "'>" + arrayDeGeneros[i].name + "</a> </li>"
     }
         document.querySelector (".detalles").innerHTML = article
 
@@ -74,7 +74,7 @@ var recomendaciones = datos.results
 var r= ""
 console.log(recomendaciones);
 for (var i = 0; i < recomendaciones.length; i++) {
-document.querySelector(".peliculasRecomendadas").innerHTML+= '<li><a href="detalle.html?idDePelicula='+recomendaciones[i].id +
+document.querySelector(".peliculasRecomendadas").innerHTML+= '<li><a href="/movies/detallePeli?idDePelicula='+recomendaciones[i].id +
 '"><img src="https://image.tmdb.org/t/p/original/' + recomendaciones[i].poster_path + '" alt=""></a></li>'
 }})
 .catch(function(){
