@@ -21,7 +21,7 @@ fetch("https://api.themoviedb.org/3/trending/all/day?api_key=d72b8119ca0d802447e
       var li;
       li = '<li>'
       li += "<button onclick='agregarFavoritos("+id+")' class='estrellita'> &#9733; </button>"
-      li += "/movies/detallePeli?idDePeli="+id+"'>"
+      li += "<a href='/movies/detallePeli?idDePeli="+id+"'>"
       li += '<img src=' + url + img + '>'
       li += '<div class="uk-position-center uk-panel divPelis"><h1 class="headersHome">' + titulo + '</h1></div>'
       li += "</a>"
