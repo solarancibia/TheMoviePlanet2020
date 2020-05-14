@@ -21,7 +21,7 @@ window.addEventListener("load",  function(){
 
           var li;
           li = '<li>'
-          li += "<a href='/movies/detallePeli.html?idDePeli="+id+"'>"
+          li += "<a href='/movies/detallePeli?idDePeli="+id+"'>"
           li += '<img src=' + url + img + '>'
           li += "<div class='uk-position-center uk-panel'><h1 class='headersGeneros'>"+titulo+"</h1></div>"
           li += "</a>"
