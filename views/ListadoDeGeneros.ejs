@@ -30,43 +30,39 @@
 
 
 
-      <a  id="login" style="color:gold"; class="uk-button uk-button-default btn btn-outline-warning" href="#modal-sections" uk-toggle>Login</a>
+      <a  id="login" style="color:gold"; class="uk-button uk-button-default btn btn-outline-warning" href="#modal-sections" uk-toggle>Sign up</a>
 
-<div id="modal-sections" uk-modal>
-    <div class="uk-modal-dialog">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <div class="uk-modal-header">
-            <h2 class="uk-modal-title">Login</h2>
+      <div id="modal-sections" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">Sign up</h2>
+            </div>
+            <div class="uk-modal-body">
+              <form class="logincompleto" action="/movies" method="post">
+              <form action ="/user" method="post">
+                <label for="nombre">Name</label>
+                <input class="name" type="text" name="name" value="" required>
+               <br>
+               <label for="email">Email</label>
+               <input type="text" name="email" value="" required>
+               <br>
+               <label for="pass">Password</label>
+               <input type="password" name="password">
+               <br>
+               <label for="bdate">Birthdate</label>
+               <input type="date" name="birthdate">
+    
+               <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary" type="submit">Send</button>
+              </div>
+              </form>
+          </div>
+            
         </div>
-        <div class="uk-modal-body">
-          <form class="logincompleto" action="ListadoDeGeneros.html" method="post">
-          <label for="nombre">Name</label>
-          <input class="name" type="text" name="name" value="" required>
-          <br>
-          <label for="genero">Gender</label>
-          <select class="" name="genero">
-            <option value="fem">
-              Female
-            </option>
-            <option value="mal">
-              Male
-            </option>
-            <option value="other">
-              Other
-            </option>
-          </select>
-          <br>
-          <label for="email">Email</label>
-          <input type="email" name="email" value="" required>
+      </div>
         </div>
-        <div class="uk-modal-footer uk-text-right">
-            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-            <button class="uk-button uk-button-primary" type="submit">Send</button>
-        </div>
-            </form>
-    </div>
-</div>
-    </div>
   </nav>
     </header>
     <p class="saludo">Welcome</p>
