@@ -9,9 +9,12 @@
 //                 listaPeliculas: movies
 //             });
 //         })
-//         .catch
+//         .catch(error => {
+//             res.send(error);
+//         })
 //     }
 // }
+
 let controlador = {
     home: function (req, res){
         res.render('Home');
