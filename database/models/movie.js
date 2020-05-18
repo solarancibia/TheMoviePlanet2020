@@ -1,4 +1,4 @@
-module.exports = function (sequelize, Dataypes){
+module.exports = function (sequelize, DataTypes){
     const movie = sequelize.define(
         'Movies',
         {
