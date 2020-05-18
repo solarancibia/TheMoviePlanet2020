@@ -12,4 +12,5 @@ router.get('/PeliculasPorGenero', controller.peliculasPorGenero);
 router.get('/DetallePeli', controller.detallePeli); 
 router.get('/PelisPreferidas', controller.pelisPreferidas); 
 router.get('/ResultadoDelBuscador', controller.resultadoDelBuscador); 
+
 module.exports = router;

@@ -1,3 +1,17 @@
+// const DB = require('../database/models')
+
+// module.exports ={
+//     index: (req, res) => {
+//         DB.Movies
+//         .findAll()
+//         .then(movies => {
+//             return res.render('moviesIndex', {
+//                 listaPeliculas: movies
+//             });
+//         })
+//         .catch
+//     }
+// }
 let controlador = {
     home: function (req, res){
         res.render('Home');
@@ -17,5 +31,5 @@ let controlador = {
     resultadoDelBuscador: function(req, res){
         res.render('ResultadoDelBuscador');
     },
-}
+};
 module.exports = controlador;
