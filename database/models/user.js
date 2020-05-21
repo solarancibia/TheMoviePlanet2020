@@ -1,10 +1,7 @@
 module.exports = function (sequelize, DataTypes){
     const user = sequelize.define(
         'users',
-        cols = {
-            id: {
-                type: DataTypes.STRING
-            },
+        {
             name: {
                 type: DataTypes.STRING
             },
@@ -15,9 +12,8 @@ module.exports = function (sequelize, DataTypes){
                 type: DataTypes.STRING
             },
             bdate: {
-                type: DataTypes.DATETIME
+                type: DataTypes.DATE
             },
-
         },
         {
             timestamps: false,
