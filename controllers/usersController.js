@@ -10,8 +10,8 @@ module.exports = {
         let user = {
             name: req.body.name,
             email: req.body.email,
-            pass: bcrypt.hashSync(req.body.password, 10),
-            birthdate: req.body.bdate
+            pass: bcrypt.hashSync(req.body.pass, 10),
+            birthdate: req.body.bdate,
         }
 
         db.users
