@@ -30,39 +30,72 @@
 
 
 
-      <a  id="login" style="color:gold"; class="uk-button uk-button-default btn btn-outline-warning" href="#modal-sections" uk-toggle>Sign up</a>
-
-      <div id="modal-sections" uk-modal>
-        <div class="uk-modal-dialog">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <div class="uk-modal-header">
-                <h2 class="uk-modal-title">Sign up</h2>
-            </div>
-            <div class="uk-modal-body">
-              <form class="logincompleto" action="/movies" method="post">
-              <form action ="/user" method="post">
-                <label for="nombre">Name</label>
-                <input class="name" type="text" name="name" value="" required>
-               <br>
-               <label for="email">Email</label>
-               <input type="text" name="email" value="" required>
-               <br>
-               <label for="pass">Password</label>
-               <input type="password" name="password">
-               <br>
-               <label for="bdate">Birthdate</label>
-               <input type="date" name="birthdate">
-    
-               <div class="uk-modal-footer uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                <button class="uk-button uk-button-primary" type="submit">Send</button>
-              </div>
-              </form>
-          </div>
-            
-        </div>
+    <div class="uk-inline">
+      <button class="uk-button uk-button-primary" style="background-color:rgb(12, 0, 82)">Enter</button>
+      <div uk-dropdown>
+          <ul class="uk-nav uk-dropdown-nav">
+            <li class="uk-active"><a href="#">Welcome back!</a></li>
+            <li><a href="#login" uk-toggle>Log in</a></li>
+            <li class="uk-nav-divider"></li>
+            <li class="uk-active"><a href="#">Are you new around here?</a></li>
+            <li><a id="registro" href="#modal-sections"uk-toggle>Sign up!</a></li>
+          </ul>
       </div>
+    </div>
+
+<div id="modal-sections" uk-modal>
+  <div class="uk-modal-dialog">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div class="uk-modal-header">
+          <h2 class="uk-modal-title">Sign up</h2>
+      </div>
+      <div class="uk-modal-body">
+        <form class="logincompleto" action="/user" method="post">
+          <label for="nombre">Name</label>
+          <input class="name" type="text" name="name" value="" required>
+         <br>
+         <label for="email">Email</label>
+         <input type="text" name="email" value="" required>
+         <br>
+         <label for="pass">Password</label>
+         <input type="password" name="password">
+         <br>
+         <label for="bdate">Birthdate</label>
+         <input type="date" name="bdate">
+
+         <div class="uk-modal-footer uk-text-right">
+          <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+          <button class="uk-button uk-button-primary" type="submit">Send</button>
         </div>
+        </form>
+    </div>
+      
+  </div>
+</div>
+
+<div id="login" uk-modal>
+  <div class="uk-modal-dialog">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div class="uk-modal-header">
+          <h2 class="uk-modal-title">Log in</h2>
+      </div>
+      <div class="uk-modal-body">
+        <form class="loginnuevo" action="/modulo-login" method="post">
+         <label for="email">Email</label>
+         <input type="text" name="email" value="" required>
+         <br>
+         <label for="pass">Password</label>
+         <input type="password" name="password">
+
+         <div class="uk-modal-footer uk-text-right">
+          <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+          <button class="uk-button uk-button-primary" type="submit">Send</button>
+        </div>
+        </form>
+    </div>
+      
+  </div>
+</div>
   </nav>
     </header>
     <p class="saludo">Welcome</p>
