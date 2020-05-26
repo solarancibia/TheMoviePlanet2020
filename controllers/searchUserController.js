@@ -6,11 +6,17 @@ module.exports = {
         db.searchUsers.findAll(
             {
                 where: [
-                         {email: {[op.like]: req.query.users + '%' }}
+                         {email: {[op.like]: '%' + req.query.users + '%' }}
                     ],
             })
             .then (function(searchUsers){
                 console.log(searchUsers);
+
+                if(searchUsers.length == 0){
+                    res.render('userResults',{
+                       searchUsers: "No results were found" 
+                    })
+                }
     
                 res.render('userResults',{
                     searchUsers: searchUsers
