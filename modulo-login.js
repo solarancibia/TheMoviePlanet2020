@@ -15,7 +15,7 @@ let moduloLogin = {
     buscarPorEmail: function (email){
         return db.users.findOne({
             where: {
-                email:email
+                email: email
             }
         })
         .then(resultado=> {
@@ -26,8 +26,8 @@ let moduloLogin = {
     validar: function (email, pass) {
         return db.Usuario.findOne({
             where:{
-                email:email,
-                password:pass,
+                email: email,
+                password: pass,
             },
         })
         .then(results=>{
