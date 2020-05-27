@@ -1,3 +1,4 @@
+
 module.exports = function (sequelize, DataTypes){
     const login = sequelize.define(
         'log',
