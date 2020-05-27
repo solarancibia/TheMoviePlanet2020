@@ -4,15 +4,24 @@ const bcrypt = require('bcryptjs');
 
 module.exports = {
     login: function(req, res){
-        
+
     },
     entrar: function(req,res) {
-        req.body.email;
-        req.body.pass = bcrypt.hashSync(req.body.password, 10);
-
-        moduloLogin.validar(email, pass).then(function(usuario){
-            if (usuario == true) {
+        moduloLogin.chequearUsuario(req.body.email).then(chequeo => {
+            if (chequeo == false){
+                console.log("no existe el usuario");
                 
+            }
+            else {
+                moduloLogin.buscarPorEmail(req.body.email).then(user => {
+                    console.log("datos");
+                    if (bcrypt.compareSync(req.body.pass, log.pass)){
+                        res.send('ha sido logueado');
+                    }
+                    else {
+                        res.send("los datos son invalidos");
+                    }
+                })
             }
         })
     }
