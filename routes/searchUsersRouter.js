@@ -4,7 +4,7 @@ var router = express.Router();
 //Controlador
 const controller = require('../controllers/searchUserController');
 
-router.get("/", controller.search);
+router.get("/userResults", controller.search);
 
 
 module.exports = router;

@@ -3,10 +3,10 @@ const op = db.Sequelize.Op;
 
 module.exports = {
     search: function(req, res){
-        db.searchUsers.findAll(
+        db.users.findAll(
             {
                 where: [
-                         {email: {[op.like]: '%' + req.query.users + '%' }}
+                         {email: {[op.like]: '%' + req.query.q + '%' }}
                     ],
             })
             .then (function(searchUsers){

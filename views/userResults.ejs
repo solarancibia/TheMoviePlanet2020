@@ -34,6 +34,20 @@
   </nav>
     </header>
 
+    <% if (users.length == 0) { %>
+        <p>No users under that username were found</p>
+    <% } else {%>
+      <p>Users found:</p>
+      <% for (let i=0; i< users.length; i++) { %>
+
+        <ul>
+          <li>
+            <a href="/movies/userResults/<%=users[i].id %>"> </a>
+            Name: <%=users[i].name %>
+            E-mail: <%=users[i].email %>
+          </li>
+        </ul>
+   <% } } %>
 
     <footer>
       <img src="/images/tmdblogo.png" class="tmdblogo">
