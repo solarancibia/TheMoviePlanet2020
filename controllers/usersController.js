@@ -23,5 +23,15 @@ module.exports = {
             res.redirect("/movies")
         })
     },
+    //las resenias de los usuarios  
+    miReview: function(){
+       db.users.findOne({
+           where: {
+               email: req.body.email
+           }
+       }).then((user)=> {
+           let id_user = usuario.id_user
+       }) 
+    }
 
 }

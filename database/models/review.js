@@ -13,5 +13,8 @@ module.exports = function (sequelize, DataTypes){
             timestamps: false,
         }
     );
+
+    //hay que asociar 
+
     return review;
 }
