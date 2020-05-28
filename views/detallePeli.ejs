@@ -25,9 +25,14 @@
         </li>
       </ul>
       <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
-          <span class="uk-search-icon-flip" uk-search-icon></span>
-          <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search" >
-      </form>
+        <span class="uk-search-icon-flip" uk-search-icon></span>
+        <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for movies" aria-label="Search" >
+</form>
+
+<form method="get" action="/search/userResults" class="uk-search uk-search-default buscar">
+<span class="uk-search-icon-flip" uk-search-icon></span>
+<input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for users" aria-label="Search" >
+</form>
     </div>
   </nav>
     </header>
@@ -87,34 +92,57 @@
        </div>
 </div>
 </div>
-<div class="reviews">
-  <h2>Watched the movie? Write a review:</h2>
-<form class="score">
-    <div class="uk-margin">
-      <div class="uk-inline">
-          <span class="uk-form-icon" uk-icon="icon: mail"></span>
-          <input class="uk-input" type="text" name="email" placeholder="E-mail" value="" required>
-      </div>
-    </div>
-    <div class="uk-margin">
-      <div class="uk-inline">
-          <span class="uk-form-icon" uk-icon="icon: lock"></span>
-          <input class="uk-input" type="password" name="password" placeholder="Password" value="" required>
-      </div>
-    </div>
-    <div class="uk-width-1-2@s">
-      <textarea class="uk-textarea" placeholder="Write your review here..." required></textarea>
-    </div>
-    <div class="uk-margin contscore">
-      <label class="uk-form-label" for="form-horizontal-text">Score /10:</label>
-      <br>
-      <input class="uk-range uk-width-1-2@s" type="range" value="2" min="0" max="10" step="1">
-  </div>
-    <br>
-    <button class="uk-button uk-button-primary" type="submit">Send</button>
-  
-</form>
+
+<div class="sinopsis">
+  <h2>Reviews:</h2>
 </div>
+
+<div class="uk-card uk-card-default uk-width-1-2@m">
+  <div class="uk-card-header">
+      <div class="uk-grid-small uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+              <img class="uk-border-circle" width="40" height="40" src="/images/avatar.png">
+          </div>
+          <div class="uk-width-expand">
+              <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+              <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+          </div>
+      </div>
+  </div>
+  <div class="uk-card-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+  </div>
+</div>
+
+        <div class="reviews uk-card-small uk-card-body">
+          <h2>Watched the movie? Write a review:</h2>
+        <form class="score">
+            <div class="uk-margin">
+              <div class="uk-inline">
+                  <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                  <input class="uk-input" type="text" name="email" placeholder="E-mail" value="" required>
+              </div>
+            </div>
+            <div class="uk-margin">
+              <div class="uk-inline">
+                  <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                  <input class="uk-input" type="password" name="password" placeholder="Password" value="" required>
+              </div>
+            </div>
+            <div class="uk-width-1-2@s uk-align-center">
+              <textarea class="uk-textarea" placeholder="Write your review here..." required></textarea>
+            </div>
+            <div class="uk-margin contscore">
+              <label class="uk-form-label" for="form-horizontal-text">Score /10:</label>
+              <br>
+              <input class="uk-range uk-width-1-2@s" type="range" value="2" min="0" max="10" step="1">
+          </div>
+            <br>
+            <button class="uk-button uk-button-primary" type="submit">Send</button> <br>
+          
+        </form>
+        </div>
+       
 
       <br>
 

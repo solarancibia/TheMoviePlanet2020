@@ -118,17 +118,24 @@ section{
   border-radius: 15px;
 }
 
+.contscore{
+  background-color: #030226 ;
+}
+.reviews{
+  align-items: center;
+  text-align: center;
+}
 .reviews h2{
   font-family: Poppins;
   font-weight: normal;
-  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  color: rgb(255, 255, 255);
   font-size: 25px;
-  background-color: #030226;
   margin-top: 3%;
-  width: 18%;
   padding-top: 2px;
   padding-bottom: 4px;
   border-radius: 15px;
+  text-align: center;
 }
 
 .posterPelicula {
@@ -162,9 +169,7 @@ section{
  padding: 3px;
 }
 
-.contscore{
-  background-color: #030226;
-}
+
 .sinopsis p{
   text-align: justify;
 }
@@ -199,7 +204,7 @@ section{
   font-size: 25px;
   background-color: #030226;
   margin-top: 3%;
-  width: 35%;
+  width: 25%;
   padding-top: 2px;
   border-radius: 15px;
 

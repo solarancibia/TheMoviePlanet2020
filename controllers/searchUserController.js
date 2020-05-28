@@ -26,6 +26,9 @@ module.exports = {
                 return res.send(error);
             })
     },
+    userDetails: function(req,res) {
+        res.render('detalleUser')
+    }
 }
 
  

@@ -23,4 +23,5 @@ module.exports = {
             res.redirect("/movies")
         })
     },
+
 }
