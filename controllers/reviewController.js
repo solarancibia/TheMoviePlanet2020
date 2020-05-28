@@ -1,6 +1,6 @@
 const db = require('../database/models');
 const op = db.Sequelize.Op;
-const moduloLogin = require ('../login.js')
+const moduloLogin = require ('../modulo-login.js')
 
 module.exports = {
     index: function (req, res){
