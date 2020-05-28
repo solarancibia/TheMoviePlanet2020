@@ -4,6 +4,19 @@ const moduloLogin = require ('../login.js')
 
 module.exports = {
     index: function (req, res){
+        db.Reviews.findAll(
+            {
+                where: {
+                    movie_ID: req.query.id
+                }
+            }
+        )
+        .then (data =>{
+            res.render('movies',{
+                movieID: req.query.id,
+                reviews: data
+            })
+        })
 
     },
 
@@ -19,7 +32,7 @@ module.exports = {
         })
         .then(function(index){
             return res.redirect('/movies?id=' + req.params.movieID)
-        }
+        })
     })
     }
  };
