@@ -32,10 +32,6 @@ module.exports = {
         .then(function(index){
             return res.redirect('/movies?id=' + req.params.movieID)
         })
-<<<<<<< HEAD
-    }
-=======
     })
->>>>>>> 58d2a54555de12137ac6d5372f27be106f6f058b
     }
  };
