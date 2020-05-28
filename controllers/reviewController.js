@@ -18,7 +18,7 @@ module.exports = {
         })
         .then(function(index){
             return res.redirect('/movies?id=' + req.params.movieID)
-        }
-    })
+        })
+    }
     }
  };
