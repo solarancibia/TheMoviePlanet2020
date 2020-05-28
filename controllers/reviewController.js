@@ -19,7 +19,6 @@ module.exports = {
         })
 
     },
-
     //Crear review
     review: (req, res) =>{
         moduloLogin.validate(req.body.email, req.body.password)
