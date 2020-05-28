@@ -34,17 +34,18 @@
   </nav>
     </header>
 
-    <% if (users.length == 0) { %>
+    <% if (searchUsers.length == 0) { %>
         <p>No users under that username were found</p>
     <% } else {%>
-      <p>Users found:</p>
-      <% for (let i=0; i< users.length; i++) { %>
+      <p class="titulos"> Users found:</p>
+      <% for (let i=0; i< searchUsers.length; i++) { %>
 
-        <ul>
+        <ul class="uk-list uk-list-large uk-list-divider">
           <li>
-            <a href="/movies/userResults/<%=users[i].id %>"> </a>
-            Name: <%=users[i].name %>
-            E-mail: <%=users[i].email %>
+            <a class= 'nombreslista' href="/movies/userResults/<%=searchUsers[i].id %>"> 
+            Name: <%=searchUsers[i].name %> <br>
+            E-mail: <%=searchUsers[i].email %>
+          </a>
           </li>
         </ul>
    <% } } %>
