@@ -1,11 +1,10 @@
 const db = require('../database/models');
 const op = db.Sequelize.Op;
-const moduloLogin = require ('../modulo-login.js')
+const moduloLogin = require ('../modulo-login');
 
 module.exports = {
     index: function (req, res){
-        db.Reviews.findAll(
-            {
+        db.Reviews.findAll({
                 where: {
                     movie_ID: req.query.id
                 }
@@ -19,6 +18,7 @@ module.exports = {
         })
 
     },
+
     //Crear review
     review: (req, res) =>{
         moduloLogin.validate(req.body.email, req.body.password)
@@ -30,7 +30,7 @@ module.exports = {
             movie_id: req.params.movieID
         })
         .then(function(index){
-            return res.redirect('/movies?id=' + req.params.movieID)
+            return res.redirect('/detallePeli?idDePeli=' + req.params.movieID)
         })
     })
     }
