@@ -118,6 +118,7 @@
         <div class="reviews uk-card-small uk-card-body">
           <h2>Watched the movie? Write a review:</h2>
         <form class="score" action="/review" method="POST">
+          <input type="hidden" name="idDePeli" value="<%=idDePeli%>"> 
             <div class="uk-margin">
               <div class="uk-inline">
                   <span class="uk-form-icon" uk-icon="icon: mail"></span>
@@ -131,12 +132,12 @@
               </div>
             </div>
             <div class="uk-width-1-2@s uk-align-center">
-              <textarea class="uk-textarea" placeholder="Write your review here..." required></textarea>
+              <textarea class="uk-textarea" name="text" placeholder="Write your review here..." required></textarea>
             </div>
             <div class="uk-margin contscore">
               <label class="uk-form-label" for="form-horizontal-text">Score /10:</label>
               <br>
-              <input class="uk-range uk-width-1-2@s" type="range" value="2" min="0" max="10" step="1">
+              <input class="uk-range uk-width-1-2@s" name="score" type="range" value="2" min="0" max="10" step="1">
           </div>
             <br>
             <button class="uk-button uk-button-primary" type="submit">Send</button> <br>

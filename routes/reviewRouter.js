@@ -5,6 +5,6 @@ var router = express.Router();
 const controller = require('../controllers/reviewController');
 
 router.get("/", controller.index);
-router.post("/review", controller.review);
+router.post("/", controller.review);
 
 module.exports = router;

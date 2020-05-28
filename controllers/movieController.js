@@ -19,8 +19,10 @@ let controlador = {
     home: function (req, res){
         res.render('Home');
     },
+    
     detallePeli: function(req, res){
-        res.render('detallePeli');
+        let idDePeli = req.query.idDePeli
+        res.render('detallePeli', {idDePeli:idDePeli});
     },
     listadoDeGeneros: function(req, res){
         res.render('ListadoDeGeneros');
