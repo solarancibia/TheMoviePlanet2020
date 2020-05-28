@@ -6,7 +6,6 @@ module.exports = {
     index: function (req, res){
 
     },
-
     //Crear review
     review: (req, res) =>{
         moduloLogin.validate(req.body.email, req.body.password)
