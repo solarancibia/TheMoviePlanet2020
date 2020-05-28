@@ -17,7 +17,7 @@ module.exports = {
             user_id: result.id,
             movie_id: req.params.movieID
         })
-        .then(function(index)){
+        .then(function(index){
             return res.redirect('/movies?id=' + req.params.movieID)
         }
     })
