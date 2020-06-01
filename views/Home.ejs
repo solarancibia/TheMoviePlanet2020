@@ -21,12 +21,32 @@
           <a class="nav-link" href="/movies/ListadoDeGeneros">Genres<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/movies/PelisPreferidas">My Reviews<span class="sr-only">(current)</span></a>
-        </li>
-        <li id="pelispref"class="nav-item">
-          <a class="nav-link" href="/movies/PelisPreferidas">My Reviews</a>
+          <a class="nav-link" href="#login" uk-toggle>My Reviews<span class="sr-only">(current)</span></a>
         </li>
       </ul>
+
+      <div id="login" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">Log in</h2>
+            </div>
+            <div class="uk-modal-body">
+              <form class="loginnuevo" action="/login" method="post">
+               <label for="email">Email</label>
+               <input type="text" name="email" value="" required>
+               <br>
+               <label for="pass">Password</label>
+               <input type="password" name="password">
+    
+               <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary" type="submit">Send</button>
+              </div>
+              </form>
+          </div>
+        </div>
+      </div>
       <!-- <form method="get"class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -105,7 +125,6 @@
           </div>
           </form>
       </div>
-        
     </div>
   </div>
     
