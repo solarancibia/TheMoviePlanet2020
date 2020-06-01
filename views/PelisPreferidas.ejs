@@ -36,10 +36,10 @@
     <p class="saludo">Welcome</p>
     <div class="uk-position-relative uk-visible-toggle uk-light"  tabindex="-1" uk-slider>
       
-      <% if (result.length == 0) { %>
+    <% if (result.length == 0) { %>
     <h1 class="headers">You have no reviews</h1>
     <% } else{ %>
-      <h1 class="headers"><%= result[0].user.name%>'s reviews </h1>
+      <h1 class="headers"><%= result[0].user.name %>'s reviews </h1>
       
 <section>
   <% for (let i=0 ; i < result.length; i++) { %>
@@ -60,7 +60,13 @@
     <div class="uk-card-body">
         <p><%result[i].review_text %></p>
     </div>
+    <div class="uk-card-footer uk-flex uk-flex-between">
+      <a href="/users/reviews/edit/ <%= result[i].id %>">Edit</a>
+      <a href="/detallePeli?idDePeli= <%= result[i].movie_id%>">Go to movie</a>
+      <a href="/users/reviews/delete/ <%= result[i].id %>">Delete</a>
+    </div>
   </div>
+  <% } %>
 </section>
 <br>
 
