@@ -37,7 +37,7 @@ module.exports = {
                 res.redirect('/users/reviews/')
             }else{
                 console.log(result.id);
-                res.redirect('/users/reviews/' + resultado.id)
+                res.redirect('/users/reviews/' + result.id)
             }
         })
     },
