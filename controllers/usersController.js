@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const bcrypt = require('bcryptjs');
+const moduloLogin = require ('../modulo-login');
 
 module.exports = {
     register: function(req,res){
@@ -32,6 +33,7 @@ module.exports = {
        }).then((user)=> {
            let id_user = usuario.id_user
        }) 
-    }
+    },
+
 
 }
