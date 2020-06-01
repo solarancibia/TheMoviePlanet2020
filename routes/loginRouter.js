@@ -7,9 +7,9 @@ const controller = require('../controllers/loginController');
 // router.get("/", controller.login);
 // router.get("/", controller.entrar);
 
-router.get ('/reviews', controller.logUser);
+router.get ('/', controller.logUser);
 
-router.post ('/reviews', controller.confirmUser);
+router.post ('/login', controller.confirmUser);
 
 router.get ('/reviews/:id', controller.getReviews);
 
