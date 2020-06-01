@@ -38,7 +38,7 @@ module.exports = {
                 res.redirect('/movies')
             }else{
                 console.log(result.id);
-                res.redirect('/movies' + result.id)
+                res.redirect('/movies/' + result.id)
 
             }
         })
