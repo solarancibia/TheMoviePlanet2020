@@ -30,14 +30,15 @@ module.exports = {
         res.render ('login', {type: 'log'});
     },
 
+    //confirmamos el login
     confirmUser: function (req, res){
         moduloLogin.validar(req.body.email, req.body.pass)
         .then(result=> {
             if(result == undefined){
-                res.redirect('/users/reviews/')
+                res.redirect('/movies')
             }else{
                 console.log(result.id);
-                res.redirect('/users/reviews/' + resultado.id)
+                res.redirect('/movies' + result.id)
             }
         })
     },
@@ -45,15 +46,12 @@ module.exports = {
     getReviews: function (req, res) {
         db.Reviews.findAll({
             where: [
-                {user_id: req.params.id}
+                {user_id: req.body.id}
             ],
-            include: [
-                {association: "usuario"}
-            ]
+            include: [ "usuario" ]
         })
         .then(result=>{
             console.log(result);
-
             res.render('reviews', {result:result})
         })
     },
