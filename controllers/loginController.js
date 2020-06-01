@@ -86,7 +86,7 @@ module.exports = {
         }) .then(()=>{
             db.Reviews.findByPk(req.params.id)
             .then(result=>{
-                res.redirect("/users/reviews/" + result.user_id)
+                res.redirect("/loginRouter/reviews/" + result.user_id)
             })
         })
     },
@@ -104,9 +104,9 @@ module.exports = {
                         id: req.params.id,
                     }
                 })
-                res.redirect('/users/reviews/')
+                res.redirect('/loginRouter/reviews/')
             }else{
-                res.redirect('/users/reviews/delete/' + req.params.id)
+                res.redirect('/loginRouter/reviews/delete/' + req.params.id)
             }
         })
     },

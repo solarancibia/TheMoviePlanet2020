@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <link rel="stylesheet" href="/stylesheets/detallePeli.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <meta charset="utf-8">
+    <title>The Movie Planet</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light idea" id="navbar">
+
+      <a class="navbar-brand" href="/movies/Home"> <img src="/images/logo.png" class="loguito" alt=""> </a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/movies/ListadoDeGeneros">Genres<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/movies/PelisPreferidas">My Reviews<span class="sr-only">(current)</span></a>
+        </li>
+        <li id="pelispref"class="nav-item">
+          <a class="nav-link" href="/movies/PelisPreferidas">Favorite movies</a>
+        </li>
+      </ul>
+      <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
+        <span class="uk-search-icon-flip" uk-search-icon></span>
+        <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for movies" aria-label="Search" >
+</form>
+
+<form method="get" action="/search/userResults" class="uk-search uk-search-default buscar">
+<span class="uk-search-icon-flip" uk-search-icon></span>
+<input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for users" aria-label="Search" >
+</form>
+    </div>
+  </nav>
+    </header>
+
+        <div class="reviews uk-card-small uk-card-body">
+            <% if (type == 'delete') { %>
+          <h2 class="lenguajes">Login</h2>
+        <form class="uk-background-secondary uk-padding uk-padding-large" action="/login/reviews/delete/<%= deleteId %>" method="POST"  >
+           <h1 style="color: white;">Delete</h1>
+            <p>Confirm your usar to delete a review</p>
+            <div class="uk-margin">
+                <div class="uk-inline uk-width-2-3">
+                    <span class="uk-form-icon" uk-icon="Icon: mail"></span>
+                    <input class="uk-input" type="text" name="email" placeholder="E-mail" id="email">
+                </div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-inline uk-width-2-3">
+                    <span class="uk-form-icon" uk-icon="Icon: lock"></span>
+                    <input class="uk-input" type="password" name="password" placeholder="Password" id="pass">
+                </div>
+            </div>
+        </form>
+        <% } else { %>
+            <h2 class="lenguajes">Login</h2>
+            <form class="score" action="/login/reviews" method="POST"  >
+                <div class="uk-margin">
+                  <div class="uk-inline">
+                      <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                      <input class="uk-input" type="text" name="email" placeholder="E-mail" value="" required>
+                  </div>
+                </div>
+                <div class="uk-margin">
+                  <div class="uk-inline">
+                      <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                      <input class="uk-input" type="password" name="password" placeholder="Password" value="" required>
+                  </div>
+                </div>
+                <br>
+                <button class="uk-button uk-button-primary" type="submit">Send</button> <br>
+              
+            </form>
+
+        </div>
+    
+  
+           
+    </section>
+<br>
+<br>
+    <footer>
+      <img src="/images/tmdblogo.png" class="tmdblogo">
+
+      <div class="nombres">
+      <ul>
+        <li>SOL RODRIGUEZ ARANCIBIA</li>
+        <br>
+        <li>EMA JUAREZ</li>
+      </ul>
+    </div>
+         </div>
+
+   </footer>
+
+
+  </body>
+<script type="text/javascript" src="/javascripts/detallePeli.js"></script>
+<script type="text/javascript" src="/javascripts/PelisPreferidas.js"></script>
+</html>
