@@ -7,4 +7,5 @@ const controller = require('../controllers/usersController');
 router.get("/", controller.register);
 router.post("/", controller.save );
 
+
 module.exports = router;

@@ -32,6 +32,24 @@
   </nav>
     </header>
 
+    <% for (let i=0; i< searchUsers.length; i++) { %>
+    <h2 class="titulos"> <%=searchUsers[i].name %> </h2>
+      <div class= detalles>
+      </div>
+   
+     <div class="lenguajes">
+      <h2>ID: </h2>
+        <ul></ul>
+    </div>
+
+    <div class="sinopsis">
+      <h2>Email: </h2>
+        <p></p>
+    </div>
+
+    <div class="fechaEstreno">
+      <h2>Birthdate: <span></span></h2>
+    </div>
   
     <footer>
       <img src="/images/tmdblogo.png" class="tmdblogo">
