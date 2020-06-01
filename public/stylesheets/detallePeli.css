@@ -118,9 +118,11 @@ section{
   border-radius: 15px;
 }
 
-.contscore{
+/* .contscore{
+  border-radius: 5px;
+  border-color: #030226  ;
   background-color: #030226 ;
-}
+} */
 .reviews{
   align-items: center;
   text-align: center;
