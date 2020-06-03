@@ -21,6 +21,7 @@ module.exports = function (sequelize, DataTypes){
 
 
     );
+    //esto nos lo hizo Gonza: se asocian las tablas (un user "has many" reviews, asociado en user_id) 
     user.associate = function (models) {
         user.hasMany(models.Reviews, {
             as: "reviews",

@@ -14,7 +14,5 @@ module.exports = function (sequelize, DataTypes){
         }
     );
 
-    //hay que asociar 
-
     return review;
 }

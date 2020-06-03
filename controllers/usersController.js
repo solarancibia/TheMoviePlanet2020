@@ -7,7 +7,7 @@ module.exports = {
         res.render("register");
     },
     //Funcion de guardado, el req.body es para capturar lo que nos pase el user como informacion
-    save: function(req, res) {
+    save: function(req, res) { 
         // return res.send(req.body)
         req.body.pass = bcrypt.hashSync(req.body.password, 10);
         db.users
@@ -16,7 +16,9 @@ module.exports = {
             res.redirect("/movies")
         })
     },
-    processLogin: function(req, res){
+    
+//lo que nos hizo Gonza
+   /* processLogin: function(req, res){
         moduloLogin.validar(req.body.email, req.body.password)
             .then(data => {
                 if(data){
@@ -33,5 +35,5 @@ module.exports = {
                 res.render('profile', { user })
             }
         })
-    }
+    }*/
 }
