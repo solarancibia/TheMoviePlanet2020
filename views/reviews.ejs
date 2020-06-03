@@ -40,53 +40,20 @@
   </nav>
     </header>
 
-
-
         <div class="reviews uk-card-small uk-card-body">
 
-            <% if (type == 'delete') { %>
-          <h2 class="lenguajes">Login</h2>
-        <form class="uk-background-secondary uk-padding uk-padding-large" action="/user/reviews/delete/<%= deleteId %>" method="POST"  >
-           <h1 style="color: white;">Delete</h1>
-            <p>Confirm your usar to delete a review</p>
-            <div class="uk-margin">
-                <div class="uk-inline uk-width-2-3">
-                    <span class="uk-form-icon" uk-icon="Icon: mail"></span>
-                    <input class="uk-input" type="text" name="email" placeholder="E-mail" id="email">
-                </div>
-            </div>
-            <div class="uk-margin">
-                <div class="uk-inline uk-width-2-3">
-                    <span class="uk-form-icon" uk-icon="Icon: lock"></span>
-                    <input class="uk-input" type="password" name="password" placeholder="Password" id="pass">
-                </div>
-            </div>
-        </form>
-        <% } else { %>
-            <h2 class="lenguajes">Login</h2>
-            <form class="score" action="/user/login" method="POST"  >
-                <div class="uk-margin">
-                  <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                      <input class="uk-input" type="text" name="email" placeholder="E-mail" value="" required>
+            <%for (let i=0 ; result.length; i++){ %>
+                <h2 class="lenguajes"> Review </h2>
+                <div class="sinopsis">
+                    <h2>Overview</h2>
+                    <p>
+                        <%= result[i].review_text %>
+                    </p>
                   </div>
-                </div>
-                <div class="uk-margin">
-                  <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                      <input class="uk-input" type="password" name="password" placeholder="Password" value="" required>
-                  </div>
-                </div>
-                <br>
-                <button class="uk-button uk-button-primary" type="submit">Send</button> <br>
-              
-            </form>
-          <% } %>
-        </div>
-    
-  
-           
-    </section>
+            }
+            
+        </div>        
+
 <br>
 <br>
     <footer>

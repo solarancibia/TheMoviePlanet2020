@@ -22,13 +22,13 @@ module.exports = {
 
     //confirmamos el login
     confirmUser: function (req, res){
-        moduloLogin.validar(req.body.email, req.body.pass)
+        moduloLogin.validar(req.body.email, req.body.password)
         .then(result=> {
             if(result == undefined){
                 res.redirect('/movies')
             }else{
                 console.log(result.id);
-                res.redirect('/movies/' + result.id)
+                res.redirect('/user/reviews/' + result.id)
 
             }
         })
@@ -37,7 +37,7 @@ module.exports = {
     getReviews: function (req, res) {
         db.Reviews.findAll({
             where: [
-                {user_id: req.body.id}
+                {user_id: req.params.id}
             ],
             include: [ "usuario" ]
         })
@@ -76,7 +76,7 @@ module.exports = {
         }) .then(()=>{
             db.Reviews.findByPk(req.params.id)
             .then(result=>{
-                res.redirect("/loginRouter/reviews/" + result.user_id)
+                res.redirect("/user/reviews/" + result.user_id)
             })
         })
     },
@@ -94,13 +94,13 @@ module.exports = {
                         id: req.params.id,
                     }
                 })
-                res.redirect('/loginRouter/reviews/')
+                res.redirect('/user/reviews/')
             }else{
-                res.redirect('/loginRouter/reviews/delete/' + req.params.id)
+                res.redirect('/user/reviews/delete/' + req.params.id)
             }
         })
     }
-    
+
 //lo que nos hizo Gonza
    /* processLogin: function(req, res){
         moduloLogin.validar(req.body.email, req.body.password)

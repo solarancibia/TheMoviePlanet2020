@@ -7,7 +7,7 @@ const controller = require('../controllers/usersController');
 router.get("/", controller.register);
 router.post("/", controller.save );
 
-router.get ('/', controller.logUser);
+router.get ('/login', controller.logUser);
 
 router.post ('/login', controller.confirmUser);
 
