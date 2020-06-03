@@ -8,7 +8,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var moviesRouter = require('./routes/moviesRouter');
 var userRouter = require('./routes/userRouter');
-var loginRouter = require('./routes/loginRouter');
 var searchRouter = require('./routes/searchUsersRouter');
 var reviewRouter = require('./routes/reviewRouter');
 
@@ -28,7 +27,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/movies', moviesRouter);
 app.use('/user', userRouter);
-app.use('/login', loginRouter);
 app.use('/search', searchRouter);
 app.use('/review', reviewRouter);
 
