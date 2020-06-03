@@ -43,7 +43,7 @@
         <div class="reviews uk-card-small uk-card-body">
             <% if (type == 'delete') { %>
           <h2 class="lenguajes">Login</h2>
-        <form class="uk-background-secondary uk-padding uk-padding-large" action="/login/reviews/delete/<%= deleteId %>" method="POST"  >
+        <form class="uk-background-secondary uk-padding uk-padding-large" action="/user/reviews/delete/<%= deleteId %>" method="POST"  >
            <h1 style="color: white;">Delete</h1>
             <p>Confirm your usar to delete a review</p>
             <div class="uk-margin">
@@ -61,7 +61,7 @@
         </form>
         <% } else { %>
             <h2 class="lenguajes">Login</h2>
-            <form class="score" action="/login/reviews" method="POST"  >
+            <form class="score" action="/user/reviews" method="POST"  >
                 <div class="uk-margin">
                   <div class="uk-inline">
                       <span class="uk-form-icon" uk-icon="icon: mail"></span>
