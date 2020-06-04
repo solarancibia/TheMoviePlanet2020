@@ -21,11 +21,9 @@
           <a class="nav-link" href="/movies/ListadoDeGeneros">Genres<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/movies/PelisPreferidas">My Reviews<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/user/login">My Reviews<span class="sr-only">(current)</span></a>
         </li>
-        <li id="pelispref"class="nav-item">
-          <a class="nav-link" href="/movies/PelisPreferidas">Favorite movies</a>
-        </li>
+     
       </ul>
       <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
         <span class="uk-search-icon-flip" uk-search-icon></span>
@@ -74,7 +72,7 @@
 
       <div class="trailer">
         <button class="uk-button uk-button-default uk-margin uk-button-secondary" type="button" uk-toggle="target: +">Watch trailer</button>
-        <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls playsinline hidden uk-video></iframe>
+        <iframe class="Video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls playsinline hidden uk-video></iframe>
 
       </div>
 
@@ -96,7 +94,7 @@
 </div>
 </div>
 
-        <div class="reviews uk-card-small uk-card-body">
+        <div class="reviews uk-card-small uk-card-body tarjetaReview">
           <h2>Watched the movie? Write a review:</h2>
         <form class="score" action="/review" method="POST">
           <input type="hidden" name="idDePeli" value="<%=idDePeli%>"> 
@@ -127,11 +125,11 @@
         </div>
       <br>
  
-      <div class="sinopsis">
+      <div class="review">
         <h2>Reviews:</h2>
       </div>
       
-      <div class="uk-card uk-card-default uk-width-1-2@m">
+      <div class="uk-card uk-card-default uk-width-1-2@m userReview">
         <div class="uk-card-header">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
                 <div class="uk-width-auto">

@@ -23,7 +23,7 @@ footer{
     height: 12vh;
     overflow: hidden;
     position: relative;
-bottom: -13vh;
+    bottom: -15.5vh;
 }
 
 .nombres {
@@ -102,6 +102,13 @@ margin-right: 17px;
 section{
 width: 235%;
 }
+.nombres li{
+  font-size: x-large;
+}
+
+.tmdblogo {
+  width: 13%;
+}
 
    }
 
@@ -110,11 +117,24 @@ width: 235%;
 section{
 width: 237%;
 height: 73vw;
+}
+
+
+body{
+  height: 100vh;
+}
+
+footer{
+  height: 7vh;
+  bottom: -33vh;
 
 }
-footer{
-  height: -1vw;
 
+.tmdblogo{
+  width: 12%;
+}
+.nombres{
+  font-size: larger;
 }
 
      }
