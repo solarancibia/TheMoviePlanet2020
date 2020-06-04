@@ -15,9 +15,9 @@ module.exports = function (sequelize, DataTypes){
     );
 // se asocian las tablas (un user "has many" reviews, asociado en user_id) 
     
-review.associate = function (models) {
-        review.hasOne(models.users, {
-            as: "users",
+    review.associate = function (models) {
+        review.belongsTo(models.users, {
+            as: "user",
             foreignKey: "user_id"
         })
     }
