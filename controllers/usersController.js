@@ -39,11 +39,12 @@ module.exports = {
             where: [
                 {user_id: req.params.id}
             ],
-            include: [ "usuario" ]
+            include: [ "user" ]
         })
         .then(result=>{
-            console.log(result);
-            res.render('reviews', {result:result})
+          //  res.send(result)
+            // console.log(result);
+            res.render('reviews', {result: result})
         })
     },
 
@@ -76,7 +77,7 @@ module.exports = {
         }) .then(()=>{
             db.Reviews.findByPk(req.params.id)
             .then(result=>{
-                res.redirect("/user/reviews/" + result.user_id)
+                res.redirect("/user/reviews/" + result.id)
             })
         })
     },

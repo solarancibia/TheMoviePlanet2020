@@ -42,7 +42,8 @@
 
         <div class="reviews uk-card-small uk-card-body">
 
-            <%for (let i=0 ; result.length; i++){ %>
+
+            <%for (let i = 0 ; i < result.length; i++){ %>
                 <h2 class="lenguajes"> Review </h2>
                 <div class="sinopsis">
                     <h2>Overview</h2>
@@ -50,7 +51,7 @@
                         <%= result[i].review_text %>
                     </p>
                   </div>
-            }
+           <% }%>
             
         </div>        
 
