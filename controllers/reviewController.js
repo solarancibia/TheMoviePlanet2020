@@ -5,13 +5,11 @@ const moduloLogin = require ('../modulo-login');
 module.exports = {
     index: function (req, res){
         db.Reviews.findAll({
-                where: [{
-                    movie_ID: { [op.like]: req.query.id}
-                }]
+            where: {  movie_ID: req.query.id  }
             }
         )
         .then (data =>{
-            res.render('movies',{
+            res.render('detallePeli',{
                 movieID: req.query.id,
                 reviews: data
             })

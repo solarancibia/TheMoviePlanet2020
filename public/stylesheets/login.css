@@ -18,6 +18,26 @@ footer{
     
 }
 
+.genero{
+  font-family: Roboto Slab;
+  color: #faac18;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #030226;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.nombreUser{
+  font-family: Poppins;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-weight: bold;
+  padding-top: 22px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
 .nombres {
   font-family: Rubik;
   font-size: small;
