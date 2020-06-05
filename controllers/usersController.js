@@ -63,19 +63,15 @@ module.exports = {
     confirmEdit: function (req,res) {
         console.log(req.params.id);
         let updateReview = {
-            review_text: req.body.review_text,
-            rating: req.body.rating,
-            id: req.params.id
-        }
+            review_text: req.body.review,
+            rating: req.body.score,
+               }
 
-        db.Reviews.update({
-            review_text: updateReview.review_text,
-            rating: updateReview.rating
-        },{
-            where: {
-                id: updateReview.id,
-            }
-        }) .then(()=>{
+               db.Reviews.update(updateReview, {
+                where: {
+                    id: req.params.id
+                }
+            }) .then(()=>{
             db.Reviews.findByPk(req.params.id)
             .then(result=>{
                 res.redirect("/user/reviews/" + result.user_id)
