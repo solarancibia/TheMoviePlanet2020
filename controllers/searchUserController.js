@@ -3,6 +3,7 @@ const op = db.Sequelize.Op;
 
 module.exports = {
     search: function(req, res){
+       
         db.users.findAll(
             {
                 where: [
@@ -27,7 +28,14 @@ module.exports = {
             })
     },
     userDetails: function(req,res) {
-        res.render('detalleUser')
+        db.users.findByPk(req.params.id)
+            .then(function (resultado) {
+                //return res.send(resultado)
+                return res.render('detalleUser', {
+                    userResult: resultado
+                })
+            })
+       
     }
 }
 

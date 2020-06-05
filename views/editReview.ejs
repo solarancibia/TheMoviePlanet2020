@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
 
-    <link rel="stylesheet" href="/stylesheets/userReviews.css">
+    <link rel="stylesheet" href="/stylesheets/editReview.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
@@ -21,11 +21,9 @@
           <a class="nav-link" href="/movies/ListadoDeGeneros">Genres<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/movies/PelisPreferidas">My Reviews<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/user/login">My Reviews<span class="sr-only">(current)</span></a>
         </li>
-        <li id="pelispref"class="nav-item">
-          <a class="nav-link" href="/movies/PelisPreferidas">Favorite movies</a>
-        </li>
+
       </ul>
       <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
         <span class="uk-search-icon-flip" uk-search-icon></span>
@@ -39,38 +37,50 @@
     </div>
   </nav>
     </header>
+    
+    <section>
 
-        <div class="uk-container">
-          <div class="uk-section uk-section-large">
+        <div class="reviews uk-card-small uk-card-body tarjetaReview">
 
-            <% if (result.length == 0) { %>
-             <h1 class="nombreUser">You haven't made any reviews yet...</h1>
+                <form method="POST" class="score" action="/user/reviews/edit/<%= result.id %>">
+                <h1 class="nombreUser">Edit review</h1>
 
-             <% } else { %>
-              <h1 class="uk-text-center nombreUser"><%= result[0].user.name %>'s reviews</h1>
-           
-              <%for (let i = 0 ; i < result.length; i++) { %>
-                <div class="uk-card uk-card-primary uk-margin" style="background-color: orange;">
-                  <div class="uk-card-badge uk-label uk-margin-bottom" style="color: white">
-                  Score: <%= result[i].rating %>
-                  </div>
-                  <div class="uk-card-body">
-                    <h4 class="uk-margin-top"> <%= result[i].review_text %> </h4>
-                  </div>
-                  <div class="uk-card-footer uk-flex uk-flex-between">
-                    <a class="uk-text-success " href="/user/reviews/edit/<%= result[i].id %>">Edit</a>
-                    <a class="uk-text-primary " href="/movies/detallePeli?idDePeli=<%= result[i].movie_id %>">Go to movie </a>
-                    <a class="uk-text-danger " href="/user/reviews/delete/<%= result[i].id %>">Delete</a>
-                  </div>
+                <div class="uk-margin">
+                    <div class="uk-inline uk-width-2-3">
+                        <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                        <input class="uk-input" type="text" name="email" id="email" placeholder="E-mail">
+                    </div>
                 </div>
-           <% }%>
-           <% }%>
-              
-            
-        </div> 
-      </div>
-      
 
+                <div class="uk-margin">
+                    <div class="uk-inline uk-width-2-3">
+                        <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                        <input class="uk-input" type="password" name="password" id="pass" placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                    <div class="uk-inline uk-width-2-3">
+                        <label for="review">Review:</label>
+                       <textarea class="uk-textarea" name="review" id="review" cols="50" rows="10"><%= result.review_text %> </textarea>
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                    <label for="review">Rating:</label> <br>
+                    <input type="range" id="score" name="score" class="uk-range radio" min="0" max="10" onchange="updateValue(this.value)">
+                    
+                </div>
+
+                <button class="uk-button uk-button-primary" type="submit" name="button">Upload</button>
+                </form>
+            
+        </div>
+
+    
+  
+           
+    </section>
 <br>
 <br>
     <footer>

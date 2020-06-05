@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+html{
+  cursor: url(/images/giphy.gif),default;
+}
+body{
+  cursor: url(/images/giphy.gif),default;
+  background-image: url("/images/Fondo.png");
+  background-size: cover;
+
+}
+footer{
+    background-color: rgba(112, 148, 181, 0.65);
+    height: 12vh;
+    overflow: hidden;
+}
+
+.nombres {
+  font-family: Rubik;
+  font-size: small;
+  color: white;
+  text-align: right;
+  float: right;
+  padding-top: 1%;
+
+}
+
+
+
+.nombres ul {
+  border-right: 5px solid #ffffff;
+    list-style-type: none;
+    padding-right: 17px;
+}
+.tmdblogo{
+  width: 7%;
+    float: right;
+    padding: 1%;
+    padding-left: 1%;
+    padding-top: 0.7%;
+}
+
+#pelispref{
+  display: none;
+}
+
+.nav-brand{
+  width: 200px;
+margin-right: 0px;
+height: 90px;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+.loguito{
+  width: 100%;
+}
+#navbar{
+padding-bottom: 0px;
+padding-top: 0px;
+}
+
+.navbar-brand{
+  width: 111px;
+margin-right: 17px;
+}
+video{
+  width: 45%;
+}
+
+.nombreUser{
+  font-family: Poppins;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-weight: bold;
+  padding-top: 22px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.genero{
+  font-family: Roboto Slab;
+  color: #faac18;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #030226;
+  width: 28%;
+  border-radius: 15px;
+
+}
+
+.lenguajes h2{
+  font-family: Poppins;
+  font-weight: normal;
+  color: white;
+  font-size: 25px;
+  padding-top: 20px;
+  background-color: #030226;
+  width: 18%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 15px;
+  margin-top: 2%;
+}
+
+section{
+  padding-left: 10px;
+    height: 110vh;
+}
+
+.sinopsis h2{
+  font-family: Poppins;
+  font-weight: normal;
+  color: white;
+  font-size: 25px;
+  background-color: #030226;
+  margin-top: 3%;
+  width: 26%;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  border-radius: 15px;
+}
+
+.review h2{
+  font-family: Poppins;
+  font-weight: normal;
+  color: white;
+  font-size: 25px;
+  background-color: #030226;
+  margin-top: 3%;
+  width: 8%;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  border-radius: 15px;
+}
+
+/* .contscore{
+  border-radius: 5px;
+  border-color: #030226  ;
+  background-color: #030226 ;
+} */
+.reviews{
+  align-items: center;
+  text-align: center;
+}
+.reviews h2{
+  font-family: Poppins;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px #000000;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  margin-top: 3%;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.posterPelicula {
+  position: relative;
+}
+
+.posterPelicula img {
+  float: right;
+  width: 22%;
+  position: absolute;
+  top: 5%;
+  left: 72%;
+  margin-top: 2%;
+}
+
+.lenguajes ul {
+  border-left: 7px solid #cf181f;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 10px 20px;
+  width: 13%;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+
+}
+
+.score label{
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ color: #ffffff;
+ font-size: 18px;
+ padding: 3px;
+}
+
+.score input.radio{
+    width: 67%;
+}
+
+.sinopsis p{
+  text-align: justify;
+}
+
+.detalles ul {
+  border-left: 7px solid #cf181f;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 10px 20px;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  width: 200px;
+}
+.sinopsis p{
+  border-left: 7px solid #cf181f;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 10px 20px;
+  width: 60%;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+
+}
+.sinopsis {
+    position: relative;
+}
+
+.review{
+  position: relative;
+}
+
+.fechaEstreno h2{
+  font-family: Poppins;
+  font-weight: normal;
+  color: white;
+  font-size: 25px;
+  background-color: #030226;
+  margin-top: 3%;
+  width: 25%;
+  padding-top: 2px;
+  border-radius: 15px;
+
+}
+.fechaEstreno{
+  position: relative;
+}
+.boton{
+  margin-bottom: 0%;
+}
+
+.boton div{
+  width: 2%;
+}
+.trailer{
+  position: relative;
+}
+.boton{
+  position: relative;
+}
+
+.tarjetaReview{
+position: relative;
+}
+
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 992px) and (orientation : portrait){
+.posterPelicula img{
+    width: 300px;
+    left: 606px;
+    top: 45px;
+    }
+
+ .sinopsis{
+    top: 58px;
+
+}
+.fechaEstreno{
+top: 50px;
+width: 500px;
+}
+
+.fechaEstreno h2{
+  width: 50vw;
+  }
+
+.trailer{
+  left: 0px;
+top: 39px;
+}
+.boton{
+  left: 0px;
+  top: 48px;
+  }
+
+.genero{
+  width: 300px;
+
+  }
+  
+  .genero p{
+  
+  width: 100vw;
+  }
+
+.lenguajes ul{
+  width: 200px;
+}
+
+.lenguajes h2{
+  width: 30vw;
+}
+
+section{
+  height: 149vh;
+}
+}
+
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) and (orientation : portrait){
+  .footer{
+    height: 7vh;
+  }
+
+  .posterPelicula img{
+  width: 270px;
+  position: absolute;
+  left: 37vh;
+  top: 2vh;
+  }
+
+.tarjetaReview{
+top: 61vh;
+}
+
+.userReview{
+  top: 66vh;
+}
+
+.genero{
+position: relative;
+}
+
+.genero p{
+position: absolute;
+top: 4vh;
+width: 100vw;
+}
+
+.titulos{
+  position: absolute;
+
+  top: 0vh;
+
+}
+.detalles{
+position: relative;
+}
+
+.detalles ul{
+  position: absolute;
+
+  bottom: -15vh;
+  }
+
+.lenguajes{
+position: relative;
+}
+
+.lenguajes h2{
+  position: absolute;
+
+  bottom: -21vh;
+
+  width: 30vw;
+  }
+
+.lenguajes ul{
+  position: absolute;
+
+  bottom: -25vh;
+
+  width: 45vw;
+}
+
+.sinopsis{
+position: relative;
+}
+
+.sinopsis h2{
+  position: absolute;
+  bottom: -33vh;
+  width: 10vw;
+}
+
+.sinopsis p{
+  position: absolute;
+  bottom: -39vh;
+}
+
+.review h2{
+  position: absolute;
+  bottom: -66vh;
+  width: 12vw;
+}
+
+.VerRecomendaciones{
+  top: 55vh;
+  }
+
+.BotonVerRecomendaciones{
+  position: relative;
+}
+.BotonVerRecomendaciones button{
+  position: absolute;
+  bottom: -60vh;
+}
+
+.trailer{
+  top:50vh;
+}
+
+.trailer button{
+  bottom: -5vh;
+  position: absolute;
+}
+
+.fechaEstreno h2{
+  position: absolute;
+  bottom: -47vh;
+  width: 50vw;
+  }
+
+  section{
+  position: relative;
+  height: 149vh;
+  }
+
+.nombres{
+font-size: larger;
+}
+
+.tmdblogo{
+  width:12%;
+}
+
+
+}
