@@ -5,9 +5,9 @@ const moduloLogin = require ('../modulo-login');
 module.exports = {
     index: function (req, res){
         db.Reviews.findAll({
-                where: {
-                    movie_ID: req.query.id
-                }
+                where: [{
+                    movie_ID: { [op.like]: req.query.id}
+                }]
             }
         )
         .then (data =>{
@@ -19,11 +19,12 @@ module.exports = {
 
     },
     //Crear review
+   
     review: (req, res) =>{
         moduloLogin.validar(req.body.email, req.body.password)
     .then (result => {
         //aca va un if (si esta bien el usuario)
-        if (result =! null) {
+        // if (result =! null) {
         db.Reviews.create({
             review_text: req.body.text,
             rating: req.body.score,
@@ -33,11 +34,11 @@ module.exports = {
         })
         .then(function(index){
             return res.redirect('/movies/detallePeli?idDePeli=' + req.body.idDePeli)
-        })}
+        })
         //aca va un else (si esta mal los datos del usuario)
-        else {
-            res.send(error)
-        }
+        // else {
+        //     res.send(error)
+        // }
     })
     }
  };
