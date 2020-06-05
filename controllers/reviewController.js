@@ -23,6 +23,7 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
     .then (result => {
         //aca va un if (si esta bien el usuario)
+        if (result =! null) {
         db.Reviews.create({
             review_text: req.body.text,
             rating: req.body.score,
@@ -32,8 +33,11 @@ module.exports = {
         })
         .then(function(index){
             return res.redirect('/movies/detallePeli?idDePeli=' + req.body.idDePeli)
-        })
+        })}
         //aca va un else (si esta mal los datos del usuario)
+        else {
+            res.send(error)
+        }
     })
     }
  };
