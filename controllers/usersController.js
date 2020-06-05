@@ -68,7 +68,7 @@ module.exports = {
             id: req.params.id
         }
 
-        db.Review.update({
+        db.Reviews.update({
             review_text: updateReview.review_text,
             rating: updateReview.rating
         },{
@@ -78,7 +78,7 @@ module.exports = {
         }) .then(()=>{
             db.Reviews.findByPk(req.params.id)
             .then(result=>{
-                res.redirect("/user/reviews/" + result.id)
+                res.redirect("/user/reviews/" + result.user_id)
             })
         })
     },
@@ -88,7 +88,7 @@ module.exports = {
     },
 
     confirmDelete: function (req, res){
-        moduloLogin.validar(req.body.email, req.body.pass)
+        moduloLogin.validar(req.body.email, req.body.password)
         .then(result=>{
             if (result != null){
                 db.Reviews.destroy({
@@ -96,30 +96,11 @@ module.exports = {
                         id: req.params.id,
                     }
                 })
-                res.redirect('/user/reviews/')
+                res.redirect('/movies')
             }else{
                 res.redirect('/user/reviews/delete/' + req.params.id)
             }
         })
     }
 
-//lo que nos hizo Gonza
-   /* processLogin: function(req, res){
-        moduloLogin.validar(req.body.email, req.body.password)
-            .then(data => {
-                if(data){
-                    res.redirect('/profile/' + data.id)
-                }else{
-                    res.send('contrasenia incorrecta')
-                }
-            })
-    },
-    profile: function(req, res){
-        db.users.findByPk(req.params.id)
-        .then(user => {
-            if(user){
-                res.render('profile', { user })
-            }
-        })
-    }*/
 }

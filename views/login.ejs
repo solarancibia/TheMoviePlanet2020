@@ -40,21 +40,23 @@
 
     <section>
 
-        <div class="reviews uk-card-small uk-card-body">
+        <div class="reviews uk-card-small uk-card-body tarjetaReview">
 
             <% if (type == 'delete') { %>
-        <form action="/user/reviews/delete/<%= deleteId %>" method="POST" >
+        <form action="/user/reviews/delete/<%= deleteId %>" method="POST" class="score">
            <h1 class="nombreUser"> Delete </h1>
             <p class="genero uk-align-center">Confirm your user to delete a review</p>
+      
             <div class="uk-margin">
                 <div class="uk-inline uk-width-2-3">
-                    <span class="uk-form-icon" uk-icon="Icon: mail"></span>
+                  <span class="uk-form-icon" uk-icon="icon: mail"></span>
                     <input class="uk-input" type="text" name="email" placeholder="E-mail" id="email">
                 </div>
             </div>
+
             <div class="uk-margin">
                 <div class="uk-inline uk-width-2-3">
-                    <span class="uk-form-icon" uk-icon="Icon: lock"></span>
+                  <span class="uk-form-icon" uk-icon="icon: lock"></span>
                     <input class="uk-input" type="password" name="password" placeholder="Password" id="pass">
                 </div> <br> <br>
                 <button class="uk-button uk-button-primary" type="submit">Confirm</button>

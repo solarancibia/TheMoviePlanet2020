@@ -1,19 +1,6 @@
-// const DB = require('../database/models')
-
-// module.exports ={
-//     index: (req, res) => {
-//         DB.Movies
-//         .findAll()
-//         .then(movies => {
-//             return res.render('moviesIndex', {
-//                 listaPeliculas: movies
-//             });
-//         })
-//         .catch(error => {
-//             res.send(error);
-//         })
-//     }
-// }
+const db = require('../database/models');
+const op = db.Sequelize.Op;
+const moduloLogin = require ('../modulo-login');
 
 let controlador = {
     home: function (req, res){
@@ -21,9 +8,24 @@ let controlador = {
     },
     
     detallePeli: function(req, res){
-        let idDePeli = req.query.idDePeli
-        res.render('detallePeli', {idDePeli:idDePeli});
+        db.Reviews.findAll({
+            // where: {
+            //     movie_id: req.query.idDePeli
+            // }
+            where: [
+                {movie_id: req.query.idDePeli}
+            ],
+            include: [ {association:"user"}, ]
+        })
+            .then(results => {
+                let idDePeli = req.query.idDePeli
+                res.render('detallePeli', { 
+                    idDePeli: idDePeli,
+                    reviews: results
+                });
+            })
     },
+
     listadoDeGeneros: function(req, res){
         res.render('ListadoDeGeneros');
     },
