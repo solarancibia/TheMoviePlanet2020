@@ -40,18 +40,41 @@
   </nav>
     </header>
 
-        <div class="reviews uk-card-small uk-card-body">
+        <div class="uk-container">
+          <div class="uk-section uk-section-large">
 
+            <% if (result.length == 0) { %>
+             <h1>You haven't made any reviews yet...</h1>
 
-            <%for (let i = 0 ; i < result.length; i++){ %>
-                <h2 class="lenguajes"> Review </h2>
+             <% } else { %>
+              <h1 class="uk-text-center"><%= result[0].user.name %>'s reviews</h1>
+           
+              <%for (let i = 0 ; i < result.length; i++) { %>
+                <div class="uk-card uk-card-secondary uk-margin">
+                  <div class="uk-card-badge uk-label uk-margin-bottom" style="color: white">
+                  Score: <%= result[i].rating %>
+                  </div>
+                  <div class="uk-card-body">
+                    <h4 class="uk-margin-top"> <%= result[i].review_text %> </h4>
+                  </div>
+                  <div class="uk-card-footer uk-flex uk-flex-between">
+                    <a class="uk-text-success" href="/user/reviews/edit/<%= result[i].id %>">Edit</a>
+                    <a class="uk-text-primary" href="/movies/detallePeli?idDePeli=<%= result[i].movie_id %>">Go to movie </a>
+                    <a class="uk-text-danger" href="/user/reviews/delete/<%= result[i].id %>">Delete</a>
+                  </div>
+                </div>
+           <% }%>
+           <% }%>
+              
+              <!-- <%for (let i = 0 ; i < result.length; i++){ %>
+                <h2 class="lenguajes"> Reviews </h2>
                 <div class="sinopsis">
                     <h2>Overview</h2>
                     <p>
                         <%= result[i].review_text %>
                     </p>
                   </div>
-           <% }%>
+           <% }%> -->
             
         </div>        
 

@@ -35,6 +35,7 @@ module.exports = {
     },
 
     getReviews: function (req, res) {
+        //return res.send('ok')
         db.Reviews.findAll({
             where: [
                 {user_id: req.params.id}
