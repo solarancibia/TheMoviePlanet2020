@@ -12,13 +12,6 @@ module.exports = {
             })
             .then (function(searchUsers){
                 console.log(searchUsers);
-
-                if(searchUsers.length == 0){
-                    res.render('userResults',{
-                       searchUsers: "No results were found" 
-                    })
-                }
-    
                 res.render('userResults',{
                     searchUsers: searchUsers
                 })
