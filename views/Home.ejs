@@ -37,7 +37,13 @@
 
       <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
                       <span class="uk-search-icon-flip" uk-search-icon></span>
-                      <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for movies" aria-label="Search" >
+                      <input class="form-control mr-sm-2" name="q" type="search" list="help" placeholder="Search for movies" aria-label="Search" >
+                      <datalist id="help">
+                        <option value="Toy Story"></option>
+                        <option value="Titanic"></option>
+                        <option value="hola"></option>
+
+                      </datalist>
       </form>
     
       <form method="get" action="/search/userResults" class="uk-search uk-search-default buscar">
