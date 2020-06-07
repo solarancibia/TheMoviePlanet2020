@@ -35,7 +35,6 @@ module.exports = {
     },
 
     getReviews: function (req, res) {
-        //return res.send('ok')
         db.Reviews.findAll({
             where: [
                 {user_id: req.params.id}
@@ -43,8 +42,6 @@ module.exports = {
             include: [ "user" ]
         })
         .then(result=>{
-          //  res.send(result)
-            // console.log(result);
             res.render('reviews', {result: result})
         })
     },
@@ -65,6 +62,7 @@ module.exports = {
         let updateReview = {
             review_text: req.body.review,
             rating: req.body.score,
+            updated_at: db.sequelize.literal("CURRENT_DATE")
                }
 
                db.Reviews.update(updateReview, {

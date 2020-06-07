@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="/stylesheets/ResultadoDelBuscador.css">
+    <link rel="stylesheet" href="/stylesheets/extras.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
@@ -34,35 +34,27 @@
   </nav>
     </header>
 
-    <section>
-      <% if (searchUsers.length == 0) { %>
-        <p>No users under that username were found</p>
-    <% } else {%>
-      <p class="titulos"> Users found:</p> <br>
-      <% for (let i=0; i< searchUsers.length; i++) { %>
-      <div class="uk-card uk-card-default uk-width-1-2@m carta">
-        <div class="uk-card-header">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-                <div class="uk-width-auto">
-                    <img class="uk-border-circle" width="40" height="40" src="/images/avatar.png">
-                </div>
-                <ul class="uk-width-expand listita">
-                  <li><a class= 'nombreslista' href="/search/userResults/<%=searchUsers[i].id %>"> 
-                    <h3 class="uk-card-title uk-margin-remove-bottom"><%=searchUsers[i].name %></h3>
-                    <p class="uk-text-meta uk-margin-remove-top"> <%=searchUsers[i].email %></p>
-                    </a>
-                  </li>
-                </ul>
-            </div>
+    <h1 class="titulos uk-align-center">Bottom Rated Reviews</h1> 
+         
+            
+    <% for(let i = 0; i < review.length; i++) { %>    
+   
+      <div class="uk-width-xlarge uk-align-center" >        
+       <div class="uk-card uk-card-primary uk-margin" style="background-color: orange;">
+        <div class="uk-card-badge uk-label uk-margin-bottom" style="color: white">
+        Score: <%= review[i].rating %>
         </div>
-    </div>
-    <% } } %> 
-    </section>
+        <div class="uk-card-body">
+          <h1 class="nombreUser"><%=review[i].user.name %></h1>
+          <h5 class="uk-margin-top">Last update: <%=review[i].updated_at%></h5>
+          <hr class="uk-divider-small">
+          <h4 class="uk-margin-top"> <%= review[i].review_text %> </h4>
+          <a class="uk-text-primary uk-align-right" href="/movies/detallePeli?idDePeli=<%= review[i].movie_id %>">Go to movie </a>
+        </div>
+      </div> 
+      </div>
 
-  
-
-   <br><br><br><br><br><br><br><br><br><br>
-
+    <% } %>
     <footer>
       <img src="/images/tmdblogo.png" class="tmdblogo">
 

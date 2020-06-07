@@ -10,6 +10,10 @@ body{
   background-image: url("/images/Fondo.png");
   background-size: cover;
 }
+
+section{
+  height: 40vh;
+}
 footer{
     background-color: rgba(112, 148, 181, 0.65);
     height: 12vh;
@@ -74,6 +78,13 @@ li img{
   width: 80%;
 }
 
+.listita{
+  list-style: none;
+}
+
+.carta{
+  margin-bottom: 10px;
+}
 
 .titulos{
   font-family: Poppins;
@@ -84,7 +95,7 @@ li img{
   padding-left: 10px;
   margin-bottom: 0px;
   margin-top: 0px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .nombreslista{

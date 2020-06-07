@@ -30,7 +30,8 @@ module.exports = {
             rating: req.body.score,
             user_id: result.id,
             movie_id: req.body.idDePeli,
-            created_at: db.sequelize.literal("CURRENT_DATE")
+            created_at: db.sequelize.literal("CURRENT_DATE"),
+            updated_at: db.sequelize.literal("CURRENT_DATE")
         })
         .then(function(index){
             return res.redirect('/movies/detallePeli?idDePeli=' + req.body.idDePeli)
