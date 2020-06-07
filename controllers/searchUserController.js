@@ -7,7 +7,7 @@ module.exports = {
         db.users.findAll(
             {
                 where: [
-                         {email: {[op.like]: '%' + req.query.q + '%' }}
+                         {name: {[op.like]: '%' + req.query.q + '%' }}
                     ],
             })
             .then (function(searchUsers){
