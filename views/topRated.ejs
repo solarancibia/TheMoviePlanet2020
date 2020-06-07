@@ -12,25 +12,38 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light idea" id="navbar">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> 
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+
       <a class="navbar-brand" href="/movies/Home"> <img src="/images/logo.png" class="loguito" alt=""> </a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="/movies/ListadoDeGeneros">Genres<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#login" uk-toggle>My Reviews<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/user/login" uk-toggle>My Reviews<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" uk-toggle>Reviews<span class="sr-only">(current)</span></a>
+          <div uk-dropdown>
+            <ul class="uk-nav uk-dropdown-nav">
+                <li><a href="/movies/topRated">Top Rated</a></li>
+                <li><a href="/movies/bottomRated">Bottom Rated</a></li>
+                <li><a href="/movies/recentReviews">Recent</a></li>
+            </ul>
+        </div>
         </li>
       </ul>
+
       <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
-          <span class="uk-search-icon-flip" uk-search-icon></span>
-          <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search" >
+                      <span class="uk-search-icon-flip" uk-search-icon></span>
+                      <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for movies" aria-label="Search" >
       </form>
-    </div>
+    
+      <form method="get" action="/search/userResults" class="uk-search uk-search-default buscar">
+        <span class="uk-search-icon-flip" uk-search-icon></span>
+        <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for users" aria-label="Search" >
+      </form>
+      
   </nav>
     </header>
 

@@ -14,6 +14,11 @@ body{
 section{
   height: 40vh;
 }
+
+.pelis{
+  height: 140vh;
+}
+
 footer{
     background-color: rgba(112, 148, 181, 0.65);
     height: 12vh;
