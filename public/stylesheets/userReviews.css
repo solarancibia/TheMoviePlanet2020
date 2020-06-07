@@ -26,6 +26,10 @@ footer{
 
 }
 
+.section{
+  height: 100vh;
+}
+
 
 
 .nombres ul {
