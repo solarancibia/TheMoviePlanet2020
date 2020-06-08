@@ -7,6 +7,7 @@ let controlador = {
         res.render('Home');
     },
     
+    // metodo que captura las resenias que subimos arriba con el form (su metodo esta en reviewController) y las mostramos en el ejs con un for
     detallePeli: function(req, res){
         db.Reviews.findAll({
             // where: {

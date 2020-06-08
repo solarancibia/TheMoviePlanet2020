@@ -118,10 +118,16 @@ video{
   margin-top: 2%;
 }
 
+.recent{
+  height:  480vh ;
+}
+
 section{
   padding-left: 10px;
-    height: 66.8vh;
+    height: 168vh;
 }
+
+
 
 .sinopsis h2{
   font-family: Poppins;
@@ -327,6 +333,10 @@ section{
     height: 7vh;
   }
 
+  .carta{
+    top: 5vh;
+  }
+
   .posterPelicula img{
   width: 270px;
   position: absolute;
@@ -355,8 +365,8 @@ width: 100vw;
 .titulos{
   position: absolute;
 
-  top: 0vh;
-
+  top: 8vh;
+ 
 }
 .detalles{
 position: relative;
@@ -436,10 +446,19 @@ position: relative;
   width: 50vw;
   }
 
+  .recent{
+    position: relative;
+    height: 200vh;
+    top: 6vh;
+  }
+  
   section{
   position: relative;
-  height: 149vh;
+  height: 83vh;
+  top: 6vh;
   }
+
+
 
 .nombres{
 font-size: larger;

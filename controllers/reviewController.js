@@ -17,11 +17,9 @@ module.exports = {
 
     },
     //Crear review
-   
     review: (req, res) =>{
         moduloLogin.validar(req.body.email, req.body.password)
     .then (result => {
-        //aca va un if (si esta bien el usuario)
         if(result == undefined){
             res.redirect('/movies')
         } else{

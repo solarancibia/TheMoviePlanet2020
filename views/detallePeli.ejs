@@ -150,6 +150,7 @@
                 <img class="uk-border-circle" width="40" height="40" src="/images/avatar.png">
               </div>
               <div class="uk-width-expand">
+              <!-- user.name viene de la asociacion en el moviecontroller con la tabla de users de nuestra base de datos para poder utilizar sus datos de los que solo tenemos la FK en la tabla reviews -->
                 <h3 class="uk-card-title uk-margin-remove-bottom"><%=reviews[i].user.name %></h3>
                 <p class="uk-text-meta uk-margin-remove-top">Created at: <%=reviews[i].created_at %></p>
                 <p class="uk-text-meta uk-margin-remove-top" >Last updated: <%=reviews[i].updated_at %></p>

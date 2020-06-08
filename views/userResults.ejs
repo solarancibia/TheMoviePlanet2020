@@ -34,6 +34,7 @@
         </li>
       </ul>
 
+      <!-- q es el nombre del input que toma el controller-->
       <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
                       <span class="uk-search-icon-flip" uk-search-icon></span>
                       <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for movies" aria-label="Search" >
@@ -48,6 +49,9 @@
     </header>
 
     <section>
+      <!-- Busca los usuarios, si no hay ninguno con ese nombre retorna un mensaje que lo comunica,
+      si existe retorna todos los usuarios que tengan ese mail o ese nombre de usuario en una tarjeta
+      de css de uikit. Se usa codigo de js para traer los datos que capturo el then del metodo search-->
       <% if (searchUsers.length == 0) { %>
         <p class="titulos">No users under that username were found . . .</p>
     <% } else {%>
@@ -60,6 +64,7 @@
                     <img class="uk-border-circle" width="40" height="40" src="/images/avatar.png">
                 </div>
                 <ul class="uk-width-expand listita">
+                  <!-- El a nos lleva al detalle de usuario cuando se cliquea -->
                   <li><a class= 'nombreslista' href="/search/userResults/<%=searchUsers[i].id %>"> 
                     <h3 class="uk-card-title uk-margin-remove-bottom"><%=searchUsers[i].name %></h3>
                     <p class="uk-text-meta uk-margin-remove-top"> <%=searchUsers[i].email %></p>

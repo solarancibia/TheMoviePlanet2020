@@ -49,25 +49,27 @@
 
    <h1 class="titulos uk-align-center">Top Rated Reviews</h1> 
          
+            <section>
+              <% for(let i = 0; i < review.length; i++) { %>    
             
-            <% for(let i = 0; i < review.length; i++) { %>    
-           
-              <div class="uk-width-xlarge uk-align-center" >        
-               <div class="uk-card uk-card-primary uk-margin" style="background-color: orange;">
-                <div class="uk-card-badge uk-label uk-margin-bottom badgetop" style="color: white" >
-                Score: <%= review[i].rating %>
+                <div class="uk-width-xlarge uk-align-center" >        
+                <div class="uk-card uk-card-primary uk-margin" style="background-color: orange;">
+                  <div class="uk-card-badge uk-label uk-margin-bottom badgetop" style="color: white" >
+                  Score: <%= review[i].rating %>
+                  </div>
+                  <div class="uk-card-body carta">
+                    <h1 class="nombreUser"><%=review[i].user.name %></h1>
+                    <h5 class="uk-margin-top">Last update: <%=review[i].updated_at%></h5>
+                    <hr class="uk-divider-small">
+                    <h4 class="uk-margin-top"> <%= review[i].review_text %> </h4>
+                    <a class="uk-text-primary uk-align-right" href="/movies/detallePeli?idDePeli=<%= review[i].movie_id %>">Go to movie </a>
+                  </div>
+                </div> 
                 </div>
-                <div class="uk-card-body">
-                  <h1 class="nombreUser"><%=review[i].user.name %></h1>
-                  <h5 class="uk-margin-top">Last update: <%=review[i].updated_at%></h5>
-                  <hr class="uk-divider-small">
-                  <h4 class="uk-margin-top"> <%= review[i].review_text %> </h4>
-                  <a class="uk-text-primary uk-align-right" href="/movies/detallePeli?idDePeli=<%= review[i].movie_id %>">Go to movie </a>
-                </div>
-              </div> 
-              </div>
        
-            <% } %>
+             <% } %>
+
+            </section>
     <footer>
       <img src="/images/tmdblogo.png" class="tmdblogo">
 
