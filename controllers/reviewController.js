@@ -2,7 +2,9 @@ const db = require('../database/models');
 const op = db.Sequelize.Op;
 const moduloLogin = require ('../modulo-login');
 
+
 module.exports = {
+    //metodo para encontrar toda review que pertenezca a cierta pelicula (en detalles)
     index: function (req, res){
         db.Reviews.findAll({
             where: {  movie_ID: req.query.id  }
@@ -16,7 +18,7 @@ module.exports = {
         })
 
     },
-    //Crear review
+    //para crear un review
     review: (req, res) =>{
         moduloLogin.validar(req.body.email, req.body.password)
     .then (result => {
