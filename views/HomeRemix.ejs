@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="/stylesheets/pagina.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <meta charset="utf-8">
+    <title>The Movie Planet</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+
+      <a class="navbar-brand" href="/movies/Home"> <img src="/images/logo.png" class="loguito" alt=""> </a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/movies/ListadoDeGeneros">Genres<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/login" uk-toggle>My Reviews<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" uk-toggle>Reviews<span class="sr-only">(current)</span></a>
+          <div uk-dropdown>
+            <ul class="uk-nav uk-dropdown-nav">
+                <li><a href="/movies/topRated">Top Rated</a></li>
+                <li><a href="/movies/bottomRated">Bottom Rated</a></li>
+                <li><a href="/movies/recentReviews">Recent</a></li>
+            </ul>
+        </div>
+        </li>
+      </ul>
+
+      <div class="uk-margin">
+      <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default uk-navbar-item" style="width: 193px; padding-left: 0px;">
+        <a href="/movies/ResultadoDelBuscador" class="uk-search-icon-flip" style="width: 72px;" uk-search-icon></a>
+                      <input class="uk-search-input" name="q" type="search" placeholder="Search for movies" aria-label="Search" >
+      </form>
+    </div>
+    
+    <div class="uk-margin">
+      <form method="get" action="/search/userResults" class="uk-search uk-search-default uk-navbar-item" style="width: 190px; padding-left: 0%;">
+        <a href="/search/userResults" class="uk-search-icon-flip" style="width: 72px;" uk-search-icon></a>
+        <input class="uk-search-input" name="q" type="search" placeholder="Search for users" aria-label="Search">
+      </form>
+    </div>
+      
+      <div class="uk-inline">
+        <button class="botonEnter" style="background-color:rgb(12, 0, 82)">ENTER</button>
+        <div uk-dropdown>
+            <ul class="uk-nav uk-dropdown-nav">
+              <li class="uk-active"><a href="#">Welcome back!</a></li>
+              <li><a href="/user/login">Log in</a></li>
+              <li class="uk-nav-divider"></li>
+              <li class="uk-active"><a href="#">Are you new around here?</a></li>
+              <li><a id="registro" href="#modal-sections"uk-toggle>Sign up!</a></li>
+            </ul>
+        </div>
+      </div>
+
+<div id="modal-sections" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Sign up</h2>
+        </div>
+        <div class="uk-modal-body">
+          <form class="logincompleto" action="/user" method="post">
+            <label for="nombre">Name</label>
+            <input class="name" type="text" name="name" value="" required>
+           <br>
+           <label for="email">Email</label>
+           <input type="text" name="email" value="" required>
+           <br>
+           <label for="pass">Password</label>
+           <input type="password" name="password">
+           <br>
+           <label for="bdate">Birthdate</label>
+           <input type="date" name="bdate">
+
+           <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="submit">Send</button>
+          </div>
+          </form>
+      </div>
+        
+    </div>
+  </div>
+
+  <div id="login" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Log in</h2>
+        </div>
+        <div class="uk-modal-body">
+          <form class="loginnuevo" action="/login" method="post">
+           <label for="email">Email</label>
+           <input type="text" name="email" value="" required>
+           <br>
+           <label for="pass">Password</label>
+           <input type="password" name="password">
+
+           <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="submit">Send</button>
+          </div>
+          </form>
+      </div>
+    </div>
+  </div>
+    
+  </nav>
+    </header>
+
+    <div class="uk-alert-danger" uk-alert>
+      <a class="uk-alert-close" uk-close></a>
+      <p>Your details don't match. If you don"t have an account go to ENTER > Sign up! to create one.</p>
+  </div>
+  
+            <p class="saludo">Welcome</p>
+            <div class="uk-position-relative uk-visible-toggle uk-light"  tabindex="-1" uk-slider>
+
+            <h1 class="headers">Popular movies</h1>
+
+      <ul class="uk-slider-items uk-child-width-1-10" id="listaPopulares">
+
+      </ul>
+
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+  </div>
+
+  <h1 class="headers">High-rated movies</h1>
+  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+    <ul class="uk-slider-items uk-child-width-1-10" id="topRated">
+
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+  <h1 class="headers">Coming soon...</h1>
+  <div class="uk-position-relative uk-visible-toggle uk-light divPagina" tabindex="-1" uk-slider>
+
+    <ul class="uk-slider-items uk-child-width-1-10" id="comingSoon">
+
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+          <footer>
+            <img src="/images/tmdblogo.png" class="tmdblogo">
+
+            <div class="nombres">
+            <ul>
+              <li>SOL RODRIGUEZ ARANCIBIA</li>
+              <br>
+              <li>EMA JUAREZ</li>
+            </ul>
+          </div>
+               </div>
+
+         </footer>
+
+
+
+
+  </body>
+  <!-- <script type="text/javascript" src="../Login/LoginCompleto.js"></script> -->
+
+<script type="text/javascript" src="/javascripts//PelisPreferidas.js"></script>
+<script type="text/javascript" src="/javascripts/Home.js"></script>
+<script type="text/javascript" src="/javascripts//ResultadoDelBuscador.js">
+
+</script>
+</html>
