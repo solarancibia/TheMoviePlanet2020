@@ -21,7 +21,7 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
     .then (result => {
         if(result == undefined){
-            res.status(200).render('HomeRemix')
+            res.render('HomeRemix')
         } else{
         db.Reviews.create({
             review_text: req.body.text,
