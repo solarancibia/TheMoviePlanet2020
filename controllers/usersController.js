@@ -16,6 +16,8 @@ module.exports = {
             res.redirect("/movies")
         })
     },
+    
+    //renderiza la vista del login
     logUser: function (req, res) {
         res.render ('login', {type: 'log'});
     },
