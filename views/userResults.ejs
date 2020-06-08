@@ -35,15 +35,19 @@
       </ul>
 
       <!-- q es el nombre del input que toma el controller-->
-      <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default buscar">
-                      <span class="uk-search-icon-flip" uk-search-icon></span>
-                      <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for movies" aria-label="Search" >
-      </form>
-    
-      <form method="get" action="/search/userResults" class="uk-search uk-search-default buscar">
-        <span class="uk-search-icon-flip" uk-search-icon></span>
-        <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search for users" aria-label="Search" >
-      </form>
+      <div class="uk-margin">
+        <form method="get" action="/movies/ResultadoDelBuscador" class="uk-search uk-search-default uk-navbar-item" style="width: 193px; padding-left: 0px;">
+          <a href="/movies/ResultadoDelBuscador" class="uk-search-icon-flip" style="width: 72px;" uk-search-icon></a>
+                        <input class="uk-search-input" name="q" type="search" placeholder="Search for movies" aria-label="Search" >
+        </form>
+      </div>
+      
+      <div class="uk-margin">
+        <form method="get" action="/search/userResults" class="uk-search uk-search-default uk-navbar-item" style="width: 190px; padding-left: 0%;">
+          <a href="/search/userResults" class="uk-search-icon-flip" style="width: 72px;" uk-search-icon></a>
+          <input class="uk-search-input" name="q" type="search" placeholder="Search for users" aria-label="Search">
+        </form>
+      </div>
       
   </nav>
     </header>

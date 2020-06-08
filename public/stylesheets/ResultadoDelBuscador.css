@@ -118,3 +118,10 @@ div.recuadro{
     padding-right: 0%;
     margin-bottom: 3%;
   }
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) and (orientation : portrait){
+    .pelis{
+    height: 73vw;
+    }
+   
+  }
