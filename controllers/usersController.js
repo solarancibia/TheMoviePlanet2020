@@ -25,7 +25,8 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(result=> {
             if(result == undefined){
-                res.redirect('/movies')
+                // res.redirect('/movies')
+                res.status(200).render('HomeRemix')
             }else{
                 console.log(result.id);
                 res.redirect('/user/reviews/' + result.id)
