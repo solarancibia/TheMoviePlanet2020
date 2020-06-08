@@ -452,6 +452,11 @@ position: relative;
     top: 6vh;
   }
   
+  .recientes{
+    position: relative;
+    top: 6vh;
+    }
+
   section{
   position: relative;
   height: 83vh;
